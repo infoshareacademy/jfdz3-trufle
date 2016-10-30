@@ -1,0 +1,18 @@
+.information1 {
+    float: left;
+    padding-left: 100px;
+}
+ img  {
+     padding-top: 10px;
+     padding-right: 30px;
+     padding-bottom: 10px;
+     padding-left: 0px;
+     transition: all 2s ease;
+     }
+ img:hover
+ {transfor: translete (22px,22px);
+     -webkit-transform:transfor: translete (22px,22px);}
+
+.information2{
+    float:right;
+}
