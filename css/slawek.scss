@@ -1,0 +1,37 @@
+body {
+  min-width: 960px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.zajawka{
+  background-color: antiquewhite;
+  box-sizing: border-box;
+  min-width: 100%;
+  min-height: 300px;
+}
+
+.basic-info{
+  max-width: 24%;
+  background-color: aquamarine;
+  display: block;
+  float: left;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 5px;
+  text-align: justify;
+}
+
+.basic-info-header{
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  
+
+}
+
+.basic-info-body {
+
+}
