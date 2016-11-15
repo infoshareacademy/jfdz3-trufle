@@ -1,0 +1,32 @@
+body {
+  max-width: 960px;
+  margin: 0px auto;
+  background-color: #eeeeee; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.zajawka {
+  background-color: red;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; }
+  .zajawka .basic-info {
+    background-color: blue;
+    padding: 2%;
+    margin: 0.5%;
+    text-align: justify;
+    max-width: 300px; }
+    .zajawka .basic-info .basic-info-header {
+      background-color: #eeeeee;
+      text-align: center;
+      padding: inherit;
+      margin: inherit; }
+    .zajawka .basic-info .basic-info-body {
+      background-color: blue;
+      margin: inherit;
+      padding-top: 5%; }
+    .zajawka .basic-info .basic-info-footer {
+      margin-top: 30px; }
+
+/*# sourceMappingURL=styles_slawek.css.map */
