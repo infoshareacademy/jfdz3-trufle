@@ -2,13 +2,20 @@ $radiusMenu: 8px;
 $font-size: 12px;
 $color: #757575;
 $menuColor: #e2e2e2;
-$linkColor: #83E6CE;
+$turkus: #83E6CE;
+$braz: #593216;
+$menuBg: #698799;
 
 body {
   margin: 0 auto;
   width: 100%;
   max-width: 960px;
   color: $color;
+  font-size: 16px;
+}
+h3{
+  padding: 1em;
+  font-size: 3em;
 }
 .container{
   //border: 1px solid;
@@ -20,8 +27,8 @@ body {
   display: block;
   float: right;
   margin: 0 20px 0 0;
-  background: #698799;
-  color: $linkColor;
+  background: $menuBg;
+  color: $turkus;
   padding: 8px 15px;
   font-size: 1.1em;
   font-weight: 600;
@@ -37,7 +44,7 @@ body {
 nav ul li{
   display: none;
   //float: left;
-  background: #698799;
+  background: $menuBg;
   padding: 8px 15px;
   font-size: 1.1em;
   font-weight: 600;
@@ -46,30 +53,65 @@ nav ul li{
   -moz-border-radius: $radiusMenu;
   border-radius: $radiusMenu;
 }
-nav ul li a{
+nav ul li:hover{
+  background: darken($menuBg, 10%);
+}
+nav a{
   color: $menuColor;
   text-decoration: none;
+  display: block;
 }
-nav ul li.active a{
+nav li.active{
   color: #83E6CE;
 }
-nav ul li a:hover{
-  color: #83E6CE;;
+nav a:hover{
+  color: #83E6CE;
+}
+article{
+  padding: 1em 0;
+  min-height: 300px;
+}
+.team{
+  text-align: center;
+}
+.team > div{
+  width: 100%;
+  margin-bottom: 3em;
+}
+.team > div img{
+  max-width: 150px;
+  background: #b6b6b6;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 75px;
+  padding: 20px;
 }
 
 /*resolution min 769px*/
 @media screen and (min-width: 769px){
+  header{
+    padding: 1em;
+  }
   .burger{
     display: none;
   }
+  //nav{
+  //  background: $color;
+  //  padding: 1em 0;
+  //}
   nav ul{
     width: 75%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    //position: fixed;
   }
   nav ul li{
     display: block;
+    float: left;
+  }
+  .team > div {
+    width: 33%;
     float: left;
   }
 }

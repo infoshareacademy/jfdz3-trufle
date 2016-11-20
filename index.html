@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -13,54 +14,86 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function(){
+            $(document).on('click', 'a', function(event){
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 500);
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="container">
-        <!--Tu dodajemy menu-->
-        <header>
-            <div class="burger">Burger</div>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Start</a></li>
-                    <li><a href="#">Wstęp</a></li>
-                    <li><a href="#">Funkcje</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Szczegóły</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="clear"></div>
-        <main>
-            <!--Zajawka - Sławek-->
-            <article>
+<div class="container">
+    <!--Tu dodajemy menu-->
+    <header>
+        <div class="burger">Burger</div>
+        <nav>
+            <ul>
+                <a href="#"><li class="">Start</li></a>
+                <a href="#"><li>Wstęp</li></a>
+                <a href="#"><li>Funkcje</li></a>
+                <a href="#team"><li>Team</li></a>
+                <a href="#"><li>Szczegóły</li></a>
+                <a href="#"><li>Newsletter</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <main>
+        <!--Zajawka - Sławek-->
+        <article>
 
-            </article>
+        </article>
 
-            <!--Spis planowanych funkcji produktu - nieprzydzielone-->
-            <article>
+        <!--Spis planowanych funkcji produktu - nieprzydzielone-->
+        <article>
 
-            </article>
+        </article>
 
-            <!--Informacje o zespole - Piotrek-->
-            <article class="team">
+        <!--Informacje o zespole - Piotrek-->
+        <article class="team" id="team">
+            <h3>Trufle Team</h3>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person1<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
+                </p>
+            </div>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person2<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
+                </p>
+            </div>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person3<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
+                </p>
+            </div>
+        </article>
 
-            </article>
+        <!--Dodatkowe informacje o produkcie - Leszek -->
+        <article>
 
-            <!--Dodatkowe informacje o produkcie - Leszek -->
-            <article>
+        </article>
 
-            </article>
+        <!--Zapis na premierę - nieprzypisane-->
+        <article>
 
-            <!--Zapis na premierę - nieprzypisane-->
-            <article>
+        </article>
+    </main>
+    <!--Na teraz wydaje mi sie ze tam trafią linki do portali społecznościowych-->
+    <footer>
 
-            </article>
-        </main>
-        <!--Na teraz wydaje mi sie ze tam trafią linki do portali społecznościowych-->
-        <footer>
-
-        </footer>
-    </div>
+    </footer>
+</div>
 </body>
 </html>
