@@ -1,7 +1,75 @@
+$radiusMenu: 8px;
+$font-size: 12px;
+$color: #757575;
+$menuColor: #e2e2e2;
+$linkColor: #83E6CE;
+
 body {
   margin: 0 auto;
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
+  color: $color;
 }
-.team {
+.container{
+  //border: 1px solid;
+}
+.clear{
+  clear: both;
+}
+.burger{
+  display: block;
+  float: right;
+  margin: 0 20px 0 0;
+  background: #698799;
+  color: $linkColor;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: helvetica, serif;
+  -webkit-border-radius: $radiusMenu;
+  -moz-border-radius: $radiusMenu;
+  border-radius: $radiusMenu;
+  cursor: pointer;
+}
+.menuActive ul li{
+  display: block;
+}
+nav ul li{
+  display: none;
+  //float: left;
+  background: #698799;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: helvetica, serif;
+  -webkit-border-radius: $radiusMenu;
+  -moz-border-radius: $radiusMenu;
+  border-radius: $radiusMenu;
+}
+nav ul li a{
+  color: $menuColor;
+  text-decoration: none;
+}
+nav ul li.active a{
+  color: #83E6CE;
+}
+nav ul li a:hover{
+  color: #83E6CE;;
+}
 
+/*resolution min 769px*/
+@media screen and (min-width: 769px){
+  .burger{
+    display: none;
+  }
+  nav ul{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul li{
+    display: block;
+    float: left;
+  }
 }

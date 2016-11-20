@@ -1,5 +1,64 @@
 body {
   margin: 0 auto;
-  width: 960px; }
+  width: 100%;
+  max-width: 960px;
+  color: #757575; }
+
+.clear {
+  clear: both; }
+
+.burger {
+  display: block;
+  float: right;
+  margin: 0 20px 0 0;
+  background: #698799;
+  color: #83E6CE;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: helvetica, serif;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  cursor: pointer; }
+
+.menuActive ul li {
+  display: block; }
+
+nav ul li {
+  display: none;
+  background: #698799;
+  padding: 8px 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: helvetica, serif;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
+
+nav ul li a {
+  color: #e2e2e2;
+  text-decoration: none; }
+
+nav ul li.active a {
+  color: #83E6CE; }
+
+nav ul li a:hover {
+  color: #83E6CE; }
+
+/*resolution min 769px*/
+@media screen and (min-width: 769px) {
+  .burger {
+    display: none; }
+
+  nav ul {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; }
+
+  nav ul li {
+    display: block;
+    float: left; } }
 
 /*# sourceMappingURL=style.css.map */

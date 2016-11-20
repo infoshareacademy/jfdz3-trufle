@@ -5,15 +5,32 @@
     <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".burger").click(function(){
+                $("nav").toggleClass("menuActive");
+            });
+        });
+    </script>
 </head>
 <body>
-    <div>
+    <div class="container">
         <!--Tu dodajemy menu-->
         <header>
+            <div class="burger">Burger</div>
             <nav>
-
+                <ul>
+                    <li class="active"><a href="#">Start</a></li>
+                    <li><a href="#">Wstęp</a></li>
+                    <li><a href="#">Funkcje</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Szczegóły</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
             </nav>
         </header>
+        <div class="clear"></div>
         <main>
             <!--Zajawka - Sławek-->
             <article>
@@ -27,7 +44,7 @@
 
             <!--Informacje o zespole - Piotrek-->
             <article class="team">
-                Załoga Trufle
+
             </article>
 
             <!--Dodatkowe informacje o produkcie - Leszek -->
