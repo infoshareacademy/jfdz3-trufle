@@ -16,7 +16,8 @@ body {
 h2 {
   padding: 1em;
   font-size: 3em;
-  font-weight: 700; }
+  font-weight: 700;
+  color: #593216; }
 
 h3 {
   padding: .8em;
@@ -95,7 +96,30 @@ article {
   margin: 0 0 2em 0; }
 
 .productInfo {
-  background: #83E6CE; }
+  background: #83E6CE;
+  text-align: center;
+  padding: 0em 0 4em 0; }
+
+.productInfo div {
+  width: calc(48% - 2px);
+  float: left;
+  margin: .5%;
+  padding: .5%;
+  border: 1px dashed #593216;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  cursor: pointer; }
+
+.productInfo div:last-of-type {
+  margin-bottom: 2em; }
+
+.productInfo div:hover {
+  background: #757575;
+  color: #83E6CE; }
+
+.productInfo i {
+  font-size: 3em; }
 
 .subscribe {
   text-align: center;
@@ -126,12 +150,14 @@ button {
 footer {
   background: #83E6CE;
   text-align: center;
-  padding: 2em 0;
-  padding-bottom: 0;
+  padding: .5em 0 0 0;
   font-size: 5em;
   position: relative;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px; }
+
+footer h3 {
+  font-size: .4em; }
 
 footer a {
   color: #593216; }

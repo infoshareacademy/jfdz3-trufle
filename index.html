@@ -7,6 +7,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--***********Burger mobile menu***********-->
     <script>
         $(document).ready(function(){
             $(".burger").click(function(){
@@ -14,6 +15,7 @@
             });
         });
     </script>
+    <!--***********Smooth menu slide/scroll***********-->
     <script>
         $(document).ready(function(){
             $(document).on('click', 'a', function(event){
@@ -28,7 +30,7 @@
 </head>
 <body>
 <div class="container">
-    <!--Tu dodajemy menu-->
+    <!--Menu-->
     <header>
         <div class="burger">Burger</div>
         <nav>
@@ -37,7 +39,7 @@
                 <a href="#"><li>About</li></a>
                 <a href="#"><li>Functions</li></a>
                 <a href="#team"><li>Team</li></a>
-                <a href="#"><li>Details</li></a>
+                <a href="#details"><li>Details</li></a>
                 <a href="#newsletter"><li>Newsletter</li></a>
             </ul>
         </nav>
@@ -54,7 +56,7 @@
 
         </article>
 
-        <!--Informacje o zespole - Piotrek-->
+        <!--Team-->
         <article class="team" id="team">
             <h2>Trufle Team</h2>
             <div>
@@ -82,12 +84,44 @@
         </article>
         <div class="clear"></div>
 
-        <!--Dodatkowe informacje o produkcie - Leszek -->
-        <article class="productInfo">
-
+        <!--Details -->
+        <article class="productInfo" id="details">
+            <h2>Details</h2>
+            <div>
+                <i class="fa fa-road"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-car"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-clock-o"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-road"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-car"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-clock-o"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <p>That's why our app is better...and many more soo ;)</p>
         </article>
+        <div class="clear"></div>
 
-        <!--Zapis na premierę - nieprzypisane-->
+        <!--Newsletter-->
         <article  class="subscribe"  id="newsletter">
             <h2>Newsletter</h2>
             <h3>If you want be on time leave us an email!</h3>
@@ -97,8 +131,9 @@
             </form>
         </article>
     </main>
-    <!--Na teraz wydaje mi sie ze tam trafią linki do portali społecznościowych-->
+    <!--Socials-->
     <footer>
+        <h3>Visit us on...</h3>
         <a href="#"><i class="fa fa-facebook-official"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-google-plus-official"></i></a>
