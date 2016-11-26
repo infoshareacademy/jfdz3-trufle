@@ -139,13 +139,38 @@ article {
   margin-bottom: 1em; }
 
 button {
+  margin-bottom:2px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   font-size: 1.5em;
   color: #593216;
-  font-weight: 700;
-  border: none;
-  background: #83E6CE;
   padding: 1em 4em;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #6BC29D;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 2px 2px 2px rgba(150,150,150,1);
+   box-shadow: 2px 2px 2px rgba(150,150,150,1)  ;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);}
+
+button:hover
+{
+  margin-top:2px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 1px 1px 2px rgba(150,150,150,1);
+  box-shadow: 1px 1px 2px rgba(150,150,150,1);
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+}
 
 footer {
   background: #83E6CE;
@@ -154,7 +179,8 @@ footer {
   font-size: 5em;
   position: relative;
   border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px; }
+  border-bottom-right-radius: 20px;
+  box-shadow: 2px}
 
 footer h3 {
   font-size: .4em; }

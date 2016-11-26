@@ -5,6 +5,7 @@ $menuColor: #e2e2e2;
 $turkus: #83E6CE;
 $brown: #593216;
 $menuBg: #698799;
+$green:#D5FCF2;
 
 body {
   margin: 0 auto;
@@ -153,14 +154,41 @@ article{
   margin-bottom: 1em;
 }
 button{
+   margin-bottom:2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   font-size: 1.5em;
-  color: $brown;
+  color: $grey;
   font-weight: 700;
-  border: none;
-  background: $turkus;
   padding: 1em 4em;
   cursor: pointer;
+  border: 1px solid #6BC29D;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 2px 2px 2px rgba(150,150,150,1);
+  box-shadow: 2px 2px 2px rgba(150,150,150,1);
+  background-image: -webkit-linear-gradient(to top, $green, $turkus);
+  background-image: -moz-linear-gradient(to top, $green, $turkus);
+  background-image: -o-linear-gradient(to top, $green, $turkus);
+  background-image: -ms-linear-gradient(to top, $green, $turkus);
+  background-image: linear-gradient(to top, $green, $turkus);
 }
+button:hover
+{
+  margin-top:2px;
+  margin-bottom: 0px;
+  -webkit-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 1px 1px 2px rgba(150,150,150,1);
+  box-shadow: 1px 1px 2px rgba(150,150,150,1);
+  background-image: -webkit-linear-gradient(to bottom, $green, $turkus);
+  background-image: -moz-linear-gradient(to bottom, $green, $turkus);
+  background-image: -o-linear-gradient(to bottom, $green, $turkus);
+  background-image: -ms-linear-gradient(to bottom, $green, $turkus);
+  background-image: linear-gradient(to bottom, $green, $turkus);
+}
+
+
 footer{
   background: $turkus;
   text-align: center;
