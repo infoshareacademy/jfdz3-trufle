@@ -218,21 +218,6 @@ button:hover {
   background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
   background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
 
-button:active
-{   border-radius:20px;
-  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-  -webkit-box-shadow: -1px -1px 2px rgba(150, 150, 150, 1);
-  -moz-box-shadow: -1px -1px 2px rgba(150,150,150,1);
-  box-shadow: -1px -1px 2px rgba(150,150,150,1);
-  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
-
-}
-
-
 footer {
   background: #83E6CE;
   text-align: center;
@@ -265,6 +250,33 @@ footer i:hover {
   padding: 2em 0 1em 0;
   position: absolute; }
 
+.zajawka {
+  box-sizing: border-box;
+  background-color: #83E6CE;
+  width: 100%; }
+  .zajawka .basic-info {
+    text-align: justify;
+    max-width: 50%;
+    float: left; }
+    .zajawka .basic-info .basic-info-header {
+      background-color: #e2e2e2;
+      text-align: center;
+      padding-top: 20px;
+      margin: inherit; }
+    .zajawka .basic-info .basic-info-body {
+      background-color: #e2e2e2;
+      margin: 1%;
+      padding: 10%; }
+    .zajawka .basic-info .basic-info-footer {
+      margin-top: 30px;
+      text-align: center; }
+    .zajawka .basic-info button {
+      padding: 1em; }
+    .zajawka .basic-info button:hover {
+      cursor: pointer; }
+    .zajawka .basic-info h1 {
+      padding: 10px; }
+
 /*----------------resolution min 769px----------------*/
 @media screen and (min-width: 769px) {
   header {
@@ -293,37 +305,11 @@ footer i:hover {
 
   .productInfo div {
     width: calc(40% - 15px);
-    margin: 0.5% 5%; } }
-*, *:before, *:after {
-  box-sizing: inherit; }
+    margin: 0.5% 5%; }
 
-.zajawka {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  background-color: #83E6CE; }
   .zajawka .basic-info {
+    width: 20%;
     padding: 2%;
-    margin: 0.5%;
-    text-align: justify;
-    max-width: 300px; }
-    .zajawka .basic-info .basic-info-header {
-      background-color: #e2e2e2;
-      text-align: center;
-      padding-top: 20px;
-      margin: inherit; }
-    .zajawka .basic-info .basic-info-body {
-      background-color: #e2e2e2;
-      margin: 1%;
-      padding: 10%; }
-    .zajawka .basic-info .basic-info-footer {
-      margin-top: 30px;
-      text-align: center; }
-    .zajawka .basic-info button {
-      padding: 1em; }
-    .zajawka .basic-info button:hover {
-      cursor: pointer; }
-    .zajawka .basic-info h1 {
-      padding: 10px; }
+    margin: .5%; } }
 
 /*# sourceMappingURL=style.css.map */
