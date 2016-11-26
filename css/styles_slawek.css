@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center; }
   .zajawka .basic-info {
-    background-color: blue;
+    background-color: blu;
     padding: 2%;
     margin: 0.5%;
     text-align: justify;
@@ -27,6 +27,7 @@ body {
       margin: inherit;
       padding-top: 5%; }
     .zajawka .basic-info .basic-info-footer {
-      margin-top: 30px; }
+      margin-top: 30px;
+      text-align: center; }
 
 /*# sourceMappingURL=styles_slawek.css.map */
