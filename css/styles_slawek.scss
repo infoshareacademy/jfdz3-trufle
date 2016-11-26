@@ -1,3 +1,13 @@
+$radiusMenu: 8px;
+$font-size: 12px;
+$grey: #757575;
+$menuColor: #e2e2e2;
+$turkus: #83E6CE;
+$brown: #593216;
+$menuBg: #698799;
+
+
+
 body {
   max-width: 960px;
   margin: 0px auto;
@@ -9,34 +19,46 @@ body {
 }
 
 .zajawka {
-  background-color: red;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
 
   .basic-info {
-    background-color: ;
+    background-color: $turkus ;
     padding: 2%;
     margin: 0.5%;
     text-align: justify;
     max-width: 300px;
 
     .basic-info-header {
-      background-color: #eeeeee;
+      background-color: $menuColor;
       text-align: center;
-      padding: inherit;
+      padding-top: 20px;
       margin: inherit;
     }
 
     .basic-info-body {
-      background-color: blue;
-      margin: inherit;
-      padding-top: 5%;
+      background-color: $menuColor;
+      margin: 1%;
+      padding: 10%;
     }
 
     .basic-info-footer {
       margin-top: 30px;
       text-align: center;
+    }
+
+    button{
+      padding: 1em;
+    }
+
+    button:hover{
+      cursor: pointer;
+
+    }
+
+    h1{
+      padding: 10px;
     }
   }
 
