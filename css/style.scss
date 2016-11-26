@@ -267,6 +267,19 @@ button:hover {
   background-image: -ms-linear-gradient(to bottom, $green, $turkus);
   background-image: linear-gradient(to bottom, $green, $turkus);
 }
+button:active
+{ border-radius:20px;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: -1px -1px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: -1px -1px 2px rgba(150,150,150,1);
+  box-shadow: -1px -1px 2px rgba(150,150,150,1);
+  background-image: -webkit-linear-gradient(to bottom, $green, $turkus);
+  background-image: -moz-linear-gradient(to bottom, $green, $turkus);
+  background-image: -o-linear-gradient(to bottom, $green, $turkus);
+  background-image: -ms-linear-gradient(to bottom, $green, $turkus);
+  background-image: linear-gradient(to bottom, $green, $turkus);
+
+}
 
 footer {
   background: $turkus;
