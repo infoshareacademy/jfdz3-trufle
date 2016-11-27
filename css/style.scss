@@ -267,7 +267,6 @@ button:hover {
   background-image: -ms-linear-gradient(to bottom, $green, $turkus);
   background-image: linear-gradient(to bottom, $green, $turkus);
 }
-
 button:active
 { border-radius:20px;
   text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
@@ -319,6 +318,52 @@ footer i:hover {
   padding: 2em 0 1em 0;
   position: absolute;
 }
+.zajawka {
+  box-sizing: border-box;
+  background-color: $turkus;
+  width: 100%;
+
+  .basic-info {
+    //padding: 2%;
+    //margin: 0.5%;
+    text-align: justify;
+    max-width: 50%;
+    //width: 100%;
+    float: left;
+
+    .basic-info-header {
+      background-color: $menuColor;
+      text-align: center;
+      padding-top: 20px;
+      margin: inherit;
+    }
+
+    .basic-info-body {
+      background-color: $menuColor;
+      margin: 1%;
+      padding: 10%;
+    }
+
+    .basic-info-footer {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    button {
+      padding: 1em;
+    }
+
+    button:hover {
+      cursor: pointer;
+
+    }
+
+    h1 {
+      padding: 10px;
+    }
+
+  }
+}
 
 /*----------------resolution min 769px----------------*/
 @media screen and (min-width: 769px) {
@@ -355,58 +400,11 @@ footer i:hover {
     width: calc(40% - 15px);
     margin: 0.5% 5%;
   }
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.zajawka {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  background-color: $turkus;
-
-  .basic-info {
-
-    padding: 2%;
-    margin: 0.5%;
-    text-align: justify;
-    max-width: 300px;
-
-    .basic-info-header {
-      background-color: $menuColor;
-      text-align: center;
-      padding-top: 20px;
-      margin: inherit;
+  .zajawka{
+    .basic-info{
+      width:20%;
+      padding: 2%;
+      margin: .5%;
     }
-
-    .basic-info-body {
-      background-color: $menuColor;
-      margin: 1%;
-      padding: 10%;
-    }
-
-    .basic-info-footer {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    button {
-      padding: 1em;
-    }
-
-    button:hover {
-      cursor: pointer;
-
-    }
-
-    h1 {
-      padding: 10px;
-    }
-
   }
 }
-
-
-

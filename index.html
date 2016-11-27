@@ -5,53 +5,219 @@
     <link rel="stylesheet" href="css/css-reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--***********Burger mobile menu***********-->
+    <script>
+        $(document).ready(function () {
+            $(".burger").click(function () {
+                $("nav").toggleClass("menuActive");
+            });
+        });
+    </script>
+    <!--***********Smooth menu slide/scroll***********-->
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', 'a', function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+            });
+        });
+    </script>
+
 </head>
 <body>
-    <div>
-        <!--Tu dodajemy menu-->
-        <header>
-            <nav>
+<div class="container">
+    <!--Menu-->
+    <header>
+        <div class="burger">Burger</div>
+        <nav>
+            <ul>
+                <a href="#">
+                    <li class="">Home</li>
+                </a>
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Functions</li>
+                </a>
+                <a href="#team">
+                    <li>Team</li>
+                </a>
+                <a href="#details">
+                    <li>Details</li>
+                </a>
+                <a href="#newsletter">
+                    <li>Newsletter</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <div class="clear"></div>
+    <main>
 
-            </nav>
-        </header>
-        <main>
-            <!--Zajawka - Sławek-->
-            <article>
+        <article class="slider">
+            <img src="img/route_66.jpg" alt="">
+        </article>
 
-            </article>
+        <!--Spis planowanych funkcji produktu - nieprzydzielone-->
+        <article class="productInfo" id="details">
+            <h2>Details</h2>
+            <div>
+                <i class="fa fa-road"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-car"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-clock-o"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-road"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-car"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <div>
+                <i class="fa fa-clock-o"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            </div>
+            <p>That's why our app is better...and many more soo ;)</p>
+        </article>
+        <div class="clear"></div>
 
-            <!--Spis planowanych funkcji produktu - nieprzydzielone-->
-            <article>
+        <!--Team-->
+        <article class="team" id="team">
+            <h2>Trufle Team</h2>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person1<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <spam class="showInfo">mail@mail.com</spam>
+                    <br>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <spam class="showInfo">+48 609 203 657</spam>
+                </p>
+            </div>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person2<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
+                </p>
+            </div>
+            <div>
+                <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
+                <p>Person3<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
+                </p>
+            </div>
+            <h3>If you want crystal blue, call Mr Heisenberg</h3>
+        </article>
+        <div class="clear"></div>
 
-            </article>
+        <!--zajawka-->
+        <article class="zajawka">
 
-            <!--Informacje o zespole - Piotrek-->
-            <article>
-
-            </article>
-
-            <!--Dodatkowe informacje o produkcie - Leszek -->
-            <article>
-                <div class="information1">
-                    <a href=""><img src="http://s018.radikal.ru/i523/1610/bd/831b5d729d71.png" alt="facebook" width="50" height="50"/></a>
-                    <a href=""><img src="http://s011.radikal.ru/i317/1610/cf/3789fae1ca83.png" alt="vkontakte" width="50" height="50"/><b></a>
-                    <a href=""><img src="http://s017.radikal.ru/i424/1610/2d/915ab1b41290.png" alt="tvitter" width="50" height="50"/></a>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+                        <h1>Łatwość Obsługi</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
-                <div class="information2">
-
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
+                        <h1>Niska Cena</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                        <h1>Szeroka Funkcjonalność</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
+                </div>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
+                        <h1>Wysokie SLA</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
+                </div>
+            <div class="clear"></div>
 
-            </article>
+        </article>
 
-            <!--Zapis na premierę - nieprzypisane-->
-            <article>
-
-            </article>
-        </main>
-        <!--Na teraz wydaje mi sie ze tam trafią linki do portali społecznościowych-->
-        <footer>
-
-        </footer>
-    </div>
+        <!--Newsletter-->
+        <article class="subscribe" id="newsletter">
+            <h2>Newsletter</h2>
+            <h3>If you want be on time leave us an email!</h3>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="john@mail.com"><br>
+                <button type="submit">Subscribe for newsletter!</button>
+            </form>
+        </article>
+    </main>
+    <!--Socials-->
+    <footer>
+        <h3>Visit us on...</h3>
+        <a href="#"><i class="fa fa-facebook-official"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google-plus-official"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <div class="rights"><p>&copy;All rights reserved!&reg;</p></div>
+    </footer>
+</div>
 </body>
 </html>
