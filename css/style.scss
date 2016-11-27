@@ -175,14 +175,14 @@ article {
   transform: rotateX(180deg) rotateY(180deg);
 }
 
-.productInfo {
+.product-info {
   background: $turkus;
   text-align: center;
   padding: 0em 0 4em 0;
   margin-top: -3px;
 }
 
-.productInfo div {
+.product-info div {
   width: calc(48% - 2px);
   float: left;
   margin: .5%;
@@ -198,16 +198,16 @@ article {
   -o-transition: background 0.8s linear;
 }
 
-.productInfo div:last-of-type {
+.product-info div:last-of-type {
   margin-bottom: 2em;
 }
 
-.productInfo div:hover {
+.product-info div:hover {
   background: $grey;
   color: $turkus;
 }
 
-.productInfo i {
+.product-info i {
   font-size: 3em;
 }
 
@@ -318,60 +318,18 @@ footer i:hover {
   padding: 2em 0 1em 0;
   position: absolute;
 }
-
-/*----------------resolution min 769px----------------*/
-@media screen and (min-width: 769px) {
-  header {
-    padding: 1em;
-    -webkit-box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
-  }
-  .burger {
-    display: none;
-  }
-  //nav{
-  //  background: $color;
-  //  padding: 1em 0;
-  //}
-  nav ul {
-    width: 75%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    //position: fixed;
-  }
-  nav ul li {
-    display: block;
-    float: left;
-  }
-  .team > div {
-    width: 33%;
-    float: left;
-    display: block;
-  }
-  .productInfo div {
-    width: calc(40% - 15px);
-    margin: 0.5% 5%;
-  }
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.zajawka {
+.product-details {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   background-color: $turkus;
+  width: 100%;
 
   .basic-info {
-
-    padding: 2%;
-    margin: 0.5%;
+    //padding: 2%;
+    //margin: 0.5%;
     text-align: justify;
-    max-width: 300px;
+    max-width: 50%;
+    //width: 100%;
+    float: left;
 
     .basic-info-header {
       background-color: $menuColor;
@@ -407,5 +365,46 @@ footer i:hover {
   }
 }
 
-
-
+/*----------------resolution min 769px----------------*/
+@media screen and (min-width: 769px) {
+  header {
+    padding: 1em;
+    -webkit-box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px -20px 35px -24px rgba(0, 0, 0, 0.75);
+  }
+  .burger {
+    display: none;
+  }
+  //nav{
+  //  background: $color;
+  //  padding: 1em 0;
+  //}
+  nav ul {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    //position: fixed;
+  }
+  nav ul li {
+    display: block;
+    float: left;
+  }
+  .team > div {
+    width: 33%;
+    float: left;
+    display: block;
+  }
+  .product-info div {
+    width: calc(40% - 15px);
+    margin: 0.5% 5%;
+  }
+  .product-details {
+    .basic-info{
+      width:20%;
+      padding: 2%;
+      margin: .5%;
+    }
+  }
+}

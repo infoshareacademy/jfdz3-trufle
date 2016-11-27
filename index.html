@@ -9,20 +9,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--***********Burger mobile menu***********-->
     <script>
-        $(document).ready(function(){
-            $(".burger").click(function(){
+        $(document).ready(function () {
+            $(".burger").click(function () {
                 $("nav").toggleClass("menuActive");
             });
         });
     </script>
     <!--***********Smooth menu slide/scroll***********-->
     <script>
-        $(document).ready(function(){
-            $(document).on('click', 'a', function(event){
+        $(document).ready(function () {
+            $(document).on('click', 'a', function (event) {
                 event.preventDefault();
 
                 $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                    scrollTop: $($.attr(this, 'href')).offset().top
                 }, 500);
             });
         });
@@ -37,8 +37,8 @@
         <nav>
             <ul>
                 <a href="#"><li class="">Home</li></a>
-                <a href="#"><li>About</li></a>
-                <a href="#"><li>Functions</li></a>
+                <!--<a href="#"><li>About</li></a>-->
+                <a href="#functions"><li>Functions</li></a>
                 <a href="#team"><li>Team</li></a>
                 <a href="#details"><li>Details</li></a>
                 <a href="#newsletter"><li>Newsletter</li></a>
@@ -47,14 +47,14 @@
     </header>
     <div class="clear"></div>
     <main>
-
+        <!--Slider-->
         <article class="slider">
             <img src="img/route_66.jpg" alt="">
         </article>
 
-        <!--Spis planowanych funkcji produktu - nieprzydzielone-->
-        <article class="productInfo" id="details">
-            <h2>Details</h2>
+        <!--Functions-->
+        <article class="product-info" id="functions">
+            <h2>Functions</h2>
             <div>
                 <i class="fa fa-road"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
@@ -85,7 +85,7 @@
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
             </div>
-            <p>That's why our app is better...and many more soo  ;)</p>
+            <p>That's why our app is better...and many more soo ;)</p>
         </article>
         <div class="clear"></div>
 
@@ -95,8 +95,11 @@
             <div>
                 <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
                 <p>Person1<br>
-                    <i class="fa fa-envelope" aria-hidden="true"></i> <spam class="showInfo">mail@mail.com</spam><br>
-                    <i class="fa fa-phone" aria-hidden="true"></i> <spam class="showInfo">+48 609 203 657</spam>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <spam class="showInfo">mail@mail.com</spam>
+                    <br>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <spam class="showInfo">+48 609 203 657</spam>
                 </p>
             </div>
             <div>
@@ -118,67 +121,73 @@
         <div class="clear"></div>
 
         <!--zajawka-->
-        <article class="zajawka">
-            <div class="basic-info">
-                <div class="basic-info-header">
-                    <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-                    <h1>Łatwość Obsługi</h1>
+        <article class="product-details" id="details">
+            <h2>Details</h2>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+                        <h1>Łatwość Obsługi</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
-                <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto at
-                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                    quasi
-                    quibusdam quis quos tenetur veritatis voluptates.
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
+                        <h1>Niska Cena</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
-                <div class="basic-info-footer">
-                    <button>Dodatkowe Informacje</button>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                        <h1>Szeroka Funkcjonalność</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
-            </div>
-            <div class="basic-info">
-                <div class="basic-info-header">
-                    <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
-                    <h1>Niska Cena</h1>
+                <div class="basic-info">
+                    <div class="basic-info-header">
+                        <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
+                        <h1>Wysokie SLA</h1>
+                    </div>
+                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                        at
+                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                        quasi
+                        quibusdam quis quos tenetur veritatis voluptates.
+                    </div>
+                    <div class="basic-info-footer">
+                        <button>Dodatkowe Informacje</button>
+                    </div>
                 </div>
-                <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto at
-                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                    quasi
-                    quibusdam quis quos tenetur veritatis voluptates.
-                </div>
-                <div class="basic-info-footer">
-                    <button>Dodatkowe Informacje</button>
-                </div>
-            </div>
-            <div class="basic-info">
-                <div class="basic-info-header">
-                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
-                    <h1>Szeroka Funkcjonalność</h1>
-                </div>
-                <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto at
-                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                    quasi
-                    quibusdam quis quos tenetur veritatis voluptates.
-                </div>
-                <div class="basic-info-footer">
-                    <button>Dodatkowe Informacje</button>
-                </div>
-            </div>
-            <div class="basic-info">
-                <div class="basic-info-header">
-                    <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
-                    <h1>Wysokie SLA</h1>
-                </div>
-                <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto at
-                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                    quasi
-                    quibusdam quis quos tenetur veritatis voluptates.
-                </div>
-                <div class="basic-info-footer">
-                    <button>Dodatkowe Informacje</button>
-                </div>
-            </div>
+            <div class="clear"></div>
         </article>
 
         <!--Newsletter-->
-        <article  class="subscribe"  id="newsletter">
+        <article class="subscribe" id="newsletter">
             <h2>Newsletter</h2>
             <h3>If you want be on time leave us an email!</h3>
             <form action="#" method="post">
