@@ -175,14 +175,14 @@ article {
   transform: rotateX(180deg) rotateY(180deg);
 }
 
-.productInfo {
+.product-info {
   background: $turkus;
   text-align: center;
   padding: 0em 0 4em 0;
   margin-top: -3px;
 }
 
-.productInfo div {
+.product-info div {
   width: calc(48% - 2px);
   float: left;
   margin: .5%;
@@ -198,16 +198,16 @@ article {
   -o-transition: background 0.8s linear;
 }
 
-.productInfo div:last-of-type {
+.product-info div:last-of-type {
   margin-bottom: 2em;
 }
 
-.productInfo div:hover {
+.product-info div:hover {
   background: $grey;
   color: $turkus;
 }
 
-.productInfo i {
+.product-info i {
   font-size: 3em;
 }
 
@@ -318,7 +318,7 @@ footer i:hover {
   padding: 2em 0 1em 0;
   position: absolute;
 }
-.zajawka {
+.product-details {
   box-sizing: border-box;
   background-color: $turkus;
   width: 100%;
@@ -396,11 +396,11 @@ footer i:hover {
     float: left;
     display: block;
   }
-  .productInfo div {
+  .product-info div {
     width: calc(40% - 15px);
     margin: 0.5% 5%;
   }
-  .zajawka{
+  .product-details {
     .basic-info{
       width:20%;
       padding: 2%;
