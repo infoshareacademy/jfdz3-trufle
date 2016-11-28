@@ -252,6 +252,30 @@ footer i {
   -ms-transition: transform 0.4s linear;
   -o-transition: transform 0.4s linear; }
 
+.contact h3
+{
+  padding-bottom:0;
+  padding-top: 0;
+
+}
+.contact
+{
+  padding-bottom: 20px;
+}
+.contact span
+{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+.contact a
+{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
 footer i:hover {
   transform: rotateZ(360deg); }
 
