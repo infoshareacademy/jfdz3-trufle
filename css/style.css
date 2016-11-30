@@ -79,8 +79,173 @@ article {
   padding: 1em 0;
   background: #ffffff; }
 
-.slider {
-  padding: 0; }
+/*---Slider---*/
+
+.slider_container
+{
+    background-color:#eaeaea;
+}
+
+.slider_container .container
+{
+    background: linear-gradient(to bottom left, #FFFFFF, #F0FFFF);
+    padding-left:0;
+    padding-right:0;
+}
+
+.slider_container .container:hover
+{
+    background: linear-gradient(to bottom right, #FFFFFF, #F0FFFF);
+    padding-left:0;
+    padding-right:0;
+}
+
+/*---Big block---*/
+.item .col-md-7
+{
+    padding-right: 0;
+}
+/*---Small block---*/
+
+.item .col-md-4
+{
+    padding-top: 10px;
+    line-height:1;
+    padding-bottom:40px;
+}
+.item .col-md-4 h1
+{
+    font-weight: bold;
+    color: #83e6ce;
+    font-size: 45px;
+    font-family: helvetica, sans-serif;
+    text-shadow: 2px 2px 3px rgba(193, 205, 205, 1);
+}
+.item .col-md-4 p
+{
+    font-weight: 300;
+    text-transform:uppercase;
+    color: #1e1b1a;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px rgba(193, 205, 205, 1);
+    font-family: helvetica, sans-serif;
+}
+.item .text-center
+{
+    clear:both;
+}
+.item .button_slider
+{
+    margin-top: 40px;
+    margin-bottom:40px;
+}
+
+
+/*---Slider Button---*/
+
+.item .btn a
+{
+    color:#373737;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+}
+.item button
+{
+    border: 1px solid green;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 2px #969696;
+    -moz-box-shadow: 2px 2px 2px #969696;
+    box-shadow: 2px 2px 2px #969696;
+    background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+    outline: 0;
+}
+
+.item button:hover
+{
+    margin-bottom: 2px;
+    -webkit-box-shadow: 1px 1px 2px #969696;
+    -moz-box-shadow: 1px 1px 2px #969696;
+    box-shadow: 1px 1px 2px #969696;
+    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);*/
+}
+
+.item button:active
+{
+    text-shadow: 1px 1px 2px #969696;
+    -webkit-box-shadow: -1px -1px 2px #969696;
+    -moz-box-shadow: -1px -1px 2px #969696;
+    box-shadow: -1px -1px 2px #969696;
+    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+}
+
+/*---The side buttons of the slider----*/
+.carousel-control {
+    width: 5%;}
+
+.carousel-control:hover {
+    width: 6%;}
+
+.carousel-indicators li {
+    border: 1px solid #c8c8c8;}
+
+.carousel-indicators li:hover {
+    background-color:#c8c8c8;}
+
+.carousel-control.left {
+    background-image: none;
+    background-color:rgba(232, 232, 232, 0.2);}
+
+.carousel-control.right {
+    background-image: none;
+    background-color:rgba(232, 232, 232, 0.2);}
+
+.carousel-control.left:hover {
+    background-image: none;
+    background-color:rgba(232, 232, 232, 0.3);}
+
+.carousel-control.right:hover {
+    background-image: none;
+    background-color:rgba(232, 232, 232, 0.3);}
+
+/*---Media---*/
+
+@media (max-width: 992px)
+{  .item .img-responsive
+    {display:none;}
+    .photo_one
+    {background-image: url(images/tramwaj1.png);}
+    .photo_two
+    {background-image: url(images/bus1.png);}
+    .photo_three
+    {background-image: url(images/train1.png);}
+}
+@media (max-width: 450px)
+{  .photo_one
+    {background-image: none;}
+    .photo_two
+    {background-image: none;}
+    .photo_three
+    { background-image: none;}
+}
+
+/*---End Slider---*/
 
 .team {
   text-align: center;
