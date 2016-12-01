@@ -3,176 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/css-reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Title</title>
+    <title>Trufle</title>
+
+    <!--***********bootstrap CSS***********-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!--***********FontAwesome***********-->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--***********Burger mobile menu***********-->
-    <script>
-        $(document).ready(function () {
-            $(".burger").click(function () {
-                $("nav").toggleClass("menuActive");
-            });
-        });
-    </script>
-    <!--***********Smooth menu slide/scroll***********-->
-    <script>
-        $(document).ready(function () {
-            $(document).on('click', 'a', function (event) {
-                event.preventDefault();
 
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
-            });
-        });
-    </script>
-
+    <!--***********Custom style***********-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <!--Menu-->
-    <header>
-        <div class="burger">Burger</div>
-        <nav>
-            <ul>
-                <a href="#"><li class="">Home</li></a>
-                <!--<a href="#"><li>About</li></a>-->
-                <a href="#functions"><li>Functions</li></a>
-                <a href="#team"><li>Team</li></a>
-                <a href="#details"><li>Details</li></a>
-                <a href="#newsletter"><li>Newsletter</li></a>
-            </ul>
+<div class="container content"><!--content-all-->
+    <header class="">
+        <div  class="row">
+        <nav class="navbar navbar-default">
+            <div class="">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Trufle</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#functions">Functions</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#details">Details</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </nav>
+        </div>
     </header>
-    <div class="clear"></div>
     <main>
-        <!--Slider-->
+        <!--SLIDER-->
+        <!--<article class="slider">-->
+            <!--<img src="img/route_66.jpg" alt="">-->
+        <!--</article>-->
 
-        <div class="container-fluid slider_container">
-            <div class="container">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Сursor -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-                    <!-- The content of the slide -->
-
-                    <div class="carousel-inner">
-                        <div class="item active ">
-                            <div class="col-md-4  col-sm-12 col-xs-12 col-md-offset-1 photo_one">
-                                <div class="text-center">
-                                    <h1>Tramwaj</h1>
-                                    <p >Trasy tramwajowe w Gdańsku</p>
-                                </div>
-                                <div class="button_slider">
-                                    <button type="button" class="btn btn-default center-block"><a href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
-                                </div>
-                            </div>
-                            <div class="col-md-7 ">
-                                <a href="http://www.ztm.gda.pl/hmvc/">
-                                    <img  class="img-responsive" src="img/tramwaj.png" alt="tramwaj">
-                                </a>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-
-                        <div class="item ">
-                            <div class="col-md-4 col-sm-12 col-xs-12 col-md-offset-1 photo_two">
-                                <div class="text-center">
-                                    <h1>Autobus</h1>
-                                    <p>Linie autobusowe w Gdańsku</p>
-                                </div>
-                                <div class="button_slider">
-                                    <button type="button" class="btn btn-default center-block"><a href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
-                                </div>
-                            </div>
-                            <div class="col-md-7 ">
-                                <a href="http://www.ztm.gda.pl/hmvc/">
-                                    <img class="img-responsive " src="img/bus.png" alt="city_bus">
-                                </a>
-                            </div>
-                            <div class="carousel-caption">
-
-
-
-                            </div>
-                        </div>
-                        <div class="item ">
-                            <div class="col-md-4 col-sm-12 col-xs-12  col-md-offset-1 photo_three">
-                                <div class="text-center">
-                                    <h1>SKM</h1>
-                                    <p>Rozkład jazdy w Trójmieście</p>
-                                </div>
-                                <div class="button_slider">
-                                    <button type="button" class="btn btn-default  center-block"><a href="http://skm.trojmiasto.pl/">Dowiedz się więcej</a></button>
-                                </div>
-                            </div>
-                            <div class="col-md-7">
-                                <a href="http://skm.trojmiasto.pl/">
-                                    <img class="img-responsive" src="img/train.png" alt="SKM">
-                                </a>
-                            </div>
-                            <div class="carousel-caption">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Control elements -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+        <!--FUNCTIONS-->
+        <article class="product-info row" id="functions">
+            <h2>Functions</h2>
+            <div class="col-sm-6 col-md-4">
+                <div>
+                <i class="fa fa-road"></i>
+                <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
-        </div>
-        <!--Functions-->
-        <article class="product-info" id="functions">
-            <h2>Functions</h2>
-            <div>
-                <i class="fa fa-road"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
-            </div>
-            <div>
+            <div class="col-sm-6 col-md-4">
+                <div>
                 <i class="fa fa-car"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
             </div>
-            <div>
+            <div class="col-sm-6 col-md-4">
+                <div>
                 <i class="fa fa-clock-o"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
             </div>
-            <div>
+            <div class="col-sm-6 col-md-4">
+                <div>
                 <i class="fa fa-road"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
             </div>
-            <div>
+            <div class="col-sm-6 col-md-4">
+                <div>
                 <i class="fa fa-car"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
             </div>
-            <div>
+            <div class="col-sm-6 col-md-4">
+                <div>
                 <i class="fa fa-clock-o"></i>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
             </div>
+
             <p>That's why our app is better...and many more soo ;)</p>
         </article>
-        <div class="clear"></div>
 
-        <!--Team-->
-        <article class="team" id="team">
+        <!--TEAM-->
+        <article class="team row" id="team">
             <h2>Trufle Team</h2>
-            <div>
+            <div class="col-sm-4">
                 <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
                 <p>Person1<br>
                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -182,14 +112,14 @@
                     <spam class="showInfo">+48 609 203 657</spam>
                 </p>
             </div>
-            <div>
+            <div class="col-sm-4">
                 <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
                 <p>Person2<br>
                     <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
                     <i class="fa fa-phone" aria-hidden="true"></i> +48 609 203 657
                 </p>
             </div>
-            <div>
+            <div class="col-sm-4">
                 <img src="img/svg-tempolate-raster-173_yivxgH6.png" alt="">
                 <p>Person3<br>
                     <i class="fa fa-envelope" aria-hidden="true"></i> mail@mail.com<br>
@@ -198,93 +128,99 @@
             </div>
             <h3>If you want crystal blue, call Mr Heisenberg</h3>
         </article>
-        <div class="clear"></div>
 
-        <!--zajawka-->
-        <article class="product-details" id="details">
+        <!--DETAILS-->
+        <article class="details row" id="details">
             <h2>Details</h2>
-                <div class="basic-info">
-                    <div class="basic-info-header">
-                        <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
-                        <h1>Łatwość Obsługi</h1>
-                    </div>
-                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
-                        at
-                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                        quasi
-                        quibusdam quis quos tenetur veritatis voluptates.
-                    </div>
-                    <div class="basic-info-footer">
-                        <button>Dodatkowe Informacje</button>
-                    </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="details-header">
+                    <i class="fa fa-compass fa-3x" aria-hidden="true"></i>
+                    <h3>Łatwość Obsługi</h3>
                 </div>
-                <div class="basic-info">
-                    <div class="basic-info-header">
-                        <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
-                        <h1>Niska Cena</h1>
-                    </div>
-                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
-                        at
-                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                        quasi
-                        quibusdam quis quos tenetur veritatis voluptates.
-                    </div>
-                    <div class="basic-info-footer">
-                        <button>Dodatkowe Informacje</button>
-                    </div>
+                <div class="details-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                    at
+                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                    quasi
+                    quibusdam quis quos tenetur veritatis voluptates.
                 </div>
-                <div class="basic-info">
-                    <div class="basic-info-header">
-                        <i class="fa fa-users fa-3x" aria-hidden="true"></i>
-                        <h1>Szeroka Funkcjonalność</h1>
-                    </div>
-                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
-                        at
-                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                        quasi
-                        quibusdam quis quos tenetur veritatis voluptates.
-                    </div>
-                    <div class="basic-info-footer">
-                        <button>Dodatkowe Informacje</button>
-                    </div>
+                <div class="details-footer">
+                    <button>Dodatkowe Informacje</button>
                 </div>
-                <div class="basic-info">
-                    <div class="basic-info-header">
-                        <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
-                        <h1>Wysokie SLA</h1>
-                    </div>
-                    <div class="basic-info-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
-                        at
-                        blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
-                        quasi
-                        quibusdam quis quos tenetur veritatis voluptates.
-                    </div>
-                    <div class="basic-info-footer">
-                        <button>Dodatkowe Informacje</button>
-                    </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="details-header">
+                    <i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i>
+                    <h3>Niska Cena</h3>
                 </div>
-            <div class="clear"></div>
+                <div class="details-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                    at
+                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                    quasi
+                    quibusdam quis quos tenetur veritatis voluptates.
+                </div>
+                <div class="details-footer">
+                    <button>Dodatkowe Informacje</button>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="details-header">
+                    <i class="fa fa-users fa-3x" aria-hidden="true"></i>
+                    <h3>Szeroka Funkcjonalność</h3>
+                </div>
+                <div class="details-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                    at
+                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                    quasi
+                    quibusdam quis quos tenetur veritatis voluptates.
+                </div>
+                <div class="details-footer">
+                    <button>Dodatkowe Informacje</button>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="details-header">
+                    <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i>
+                    <h3>Wysokie SLA</h3>
+                </div>
+                <div class="details-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab architecto
+                    at
+                    blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
+                    quasi
+                    quibusdam quis quos tenetur veritatis voluptates.
+                </div>
+                <div class="details-footer">
+                    <button>Dodatkowe Informacje</button>
+                </div>
+            </div>
         </article>
 
-        <!--Newsletter-->
-        <article class="subscribe" id="newsletter">
-            <h2>Newsletter</h2>
-            <h3>If you want be on time leave us an email!</h3>
-            <form action="#" method="post">
-                <input type="email" name="email" placeholder="john@mail.com"><br>
-                <button type="submit">Subscribe for newsletter!</button>
-            </form>
+        <!--NEWSLETTER-->
+        <article class="subscribe row" id="newsletter">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>Newsletter</h2>
+                <h3>If you want be on time leave us an email!</h3>
+                <form action="#" method="post">
+                    <input type="email" name="email" placeholder="john@mail.com"><br>
+                    <button type="submit">Subscribe for newsletter!</button>
+                </form>
+            </div>
         </article>
+
+        <!--SOCIALS-->
+        <footer class="row ">
+            <h3>Visit us on...</h3>
+            <a href="#"><i class="fa fa-facebook-official"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus-official"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <div class="rights"><p>&copy;All rights reserved!&reg;</p></div>
+        </footer>
     </main>
-    <!--Socials-->
-    <footer>
-        <h3>Visit us on...</h3>
-        <a href="#"><i class="fa fa-facebook-official"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-google-plus-official"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-        <div class="rights"><p>&copy;All rights reserved!&reg;</p></div>
-    </footer>
 </div>
+
+<!--***********jQuery***********-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--***********bootstrap JS***********-->
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
