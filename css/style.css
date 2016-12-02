@@ -101,7 +101,8 @@ h2 {
 }
 
 .item button:hover
-{  -webkit-box-shadow: 1px 1px 2px #969696;
+{   border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 2px #969696;
     -moz-box-shadow: 1px 1px 2px #969696;
     box-shadow: 1px 1px 2px #969696;
     background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
@@ -112,7 +113,7 @@ h2 {
 }
 
 .item button:active
-{
+{   border-radius: 5px;
     text-shadow: 1px 1px 2px #969696;
     -webkit-box-shadow: -1px -1px 2px #969696;
     -moz-box-shadow: -1px -1px 2px #969696;
