@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: new helvetica, monospace;
   font-size: 16px; }
@@ -9,212 +10,153 @@ h2 {
   color: #593216; }
 
 /*---Slider---*/
+.slider_container {
+  background-color: #eaeaea; }
 
-.slider_container
-{
-    background-color:#eaeaea;
-}
+.slider_container .slider_blok {
+  background: linear-gradient(to bottom left, #fffff0, #d6fcfc);
+  padding-left: 0;
+  padding-right: 0; }
 
-.slider_container .slider_blok
-{
-    background: linear-gradient(to bottom left, #fffff0, #d6fcfc);
-    padding-left:0;
-    padding-right:0;
-}
-
-.slider_container .slider_blok:hover
-{
-    background: linear-gradient(to bottom right, #fffff0, #d6fcfc);
-    padding-left:0;
-    padding-right:0;
-}
+.slider_container .slider_blok:hover {
+  background: linear-gradient(to bottom right, #fffff0, #d6fcfc);
+  padding-left: 0;
+  padding-right: 0; }
 
 /*---Big block---*/
-.item .col-md-7
-{
-    padding-right: 0px;
-}
+.item .col-md-7 {
+  padding-right: 0px; }
+
 /*---Small block---*/
+.item .col-md-4 {
+  padding-top: 10px;
+  line-height: 1;
+  padding-bottom: 40px; }
 
-.item .col-md-4
-{
-    padding-top: 10px;
-    line-height:1;
-    padding-bottom:40px;
-}
-.item .col-md-4 h1
-{
-    font-weight: bold;
-    color: #83e6ce;
-    font-size: 45px;
-    font-family: helvetica, sans-serif;
-    text-shadow: 2px 2px 3px rgba(193, 205, 205, 1);
-}
-.item .col-md-4 p
-{
-    font-weight: 300;
-    text-transform:uppercase;
-    color: #1e1b1a;
-    font-size: 20px;
-    text-shadow: 2px 2px 3px rgba(193, 205, 205, 1);
-    font-family: helvetica, sans-serif;
-}
-.item .text-center
-{
-    clear:both;
-}
+.item .col-md-4 h1 {
+  font-weight: bold;
+  color: #83e6ce;
+  font-size: 45px;
+  font-family: helvetica, sans-serif;
+  text-shadow: 2px 2px 3px #c1cdcd; }
 
+.item .col-md-4 p {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #1e1b1a;
+  font-size: 20px;
+  text-shadow: 2px 2px 3px #c1cdcd;
+  font-family: helvetica, sans-serif; }
+
+.item .text-center {
+  clear: both; }
 
 /*---Button---*/
+.item .button_slider {
+  margin-top: 50px;
+  margin-bottom: 30px; }
 
-.item .button_slider
-{
-    margin-top: 50px;
-    margin-bottom:30px;
-}
+.item .btn a {
+  color: #373737;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: helvetica, sans-serif;
+  font-size: 16px; }
 
-.item .btn a
-{
-    color:#373737;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform:uppercase;
-    font-family: helvetica, sans-serif;
-    font-size: 16px;
-}
-.item button
-{
-    border: 1px solid green;
-    padding: 10px 20px 10px 20px;
-    button: 2em;
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-box-shadow: 2px 2px 2px #969696;
-    -moz-box-shadow: 2px 2px 2px #969696;
-    box-shadow: 2px 2px 2px #969696;
-    background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
-    background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
-    background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
-    background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
-    background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
-    outline: 0;
-}
+.item button {
+  border: 1px solid green;
+  padding: 10px 20px 10px 20px;
+  button: 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 2px #969696;
+  -moz-box-shadow: 2px 2px 2px #969696;
+  box-shadow: 2px 2px 2px #969696;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+  outline: 0; }
 
-.item button:hover
-{   border-radius: 5px;
-    -webkit-box-shadow: 1px 1px 2px #969696;
-    -moz-box-shadow: 1px 1px 2px #969696;
-    box-shadow: 1px 1px 2px #969696;
-    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
-}
+.item button:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
 
-.item button:active
-{   border-radius: 5px;
-    text-shadow: 1px 1px 2px #969696;
-    -webkit-box-shadow: -1px -1px 2px #969696;
-    -moz-box-shadow: -1px -1px 2px #969696;
-    box-shadow: -1px -1px 2px #969696;
-    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
-}
-
+.item button:active {
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #969696;
+  -webkit-box-shadow: -1px -1px 2px #969696;
+  -moz-box-shadow: -1px -1px 2px #969696;
+  box-shadow: -1px -1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
 
 /*---The side buttons of the slider----*/
+.carousel-control {
+  width: 5%; }
 
+.carousel-control:hover {
+  width: 6%; }
 
-.carousel-control
-{
-    width: 5%;
-}
-.carousel-control:hover
-{
-    width: 6%;
-}
+.carousel-indicators li {
+  border: 1px solid #c8c8c8; }
 
-.carousel-indicators li
-{
-    border: 1px solid #c8c8c8;
-}
-.carousel-indicators li:hover
-{
-    background-color:#c8c8c8;
-}
-.carousel-control.left
-{
-    background-image: none;
-    background-color:rgba(232, 232, 232, 0.2);
-}
-.carousel-control.right
-{
-    background-image: none;
-    background-color:rgba(232, 232, 232, 0.2);
-}
-.carousel-control.left:hover
-{
-    background-image: none;
-    background-color:rgba(232, 232, 232, 0.3);
-}
-.carousel-control.right:hover
-{
-    background-image: none;
-    background-color:rgba(232, 232, 232, 0.3);
-}
+.carousel-indicators li:hover {
+  background-color: #c8c8c8; }
+
+.carousel-control.left {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.2); }
+
+.carousel-control.right {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.2); }
+
+.carousel-control.left:hover {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.3); }
+
+.carousel-control.right:hover {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.3); }
 
 /*----Photo Transport----*/
-.item .img-responsive
-{
-    opacity: 0.95;
-}
+.item .img-responsive {
+  opacity: 0.95; }
 
-.item .img-responsive:hover
-{
-    opacity: 1;
-}
-
+.item .img-responsive:hover {
+  opacity: 1; }
 
 /*----Media----*/
+@media (max-width: 992px) {
+  .item .img-responsive {
+    display: none; } }
+@media (min-width: 450px) and (max-width: 992px) {
+  .photo_one {
+    background: url(../img/tramwaj1.png) no-repeat; }
 
+  .photo_two {
+    background: url(../img/bus1.png) no-repeat; }
 
-@media (max-width: 992px){
-    .item .img-responsive
-    {
-        display:none;
-    }
-}
-
-@media (min-width: 450px) and (max-width: 992px)
-{
-    .photo_one
-    {
-        background: url(../img/tramwaj1.png) no-repeat;
-    }
-    .photo_two
-    {
-        background: url(../img/bus1.png)no-repeat;
-    }
-    .photo_three
-    {
-        background: url(../img/train1.png) no-repeat;
-    }
-}
-
-@media (min-width: 273px) and (max-width: 450px)
-{
-    .photo_one, .photo_two, .photo_three
-    {
-        background: url(../img/godło.png) center no-repeat ;
-    }
-}
-
-
+  .photo_three {
+    background: url(../img/train1.png) no-repeat; } }
+@media (min-width: 273px) and (max-width: 450px) {
+  .photo_one, .photo_two, .photo_three {
+    background: url(../img/godło.png) center no-repeat; } }
 /*---End Slider---*/
+
 .content {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
