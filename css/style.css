@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 body {
   font-family: new helvetica, monospace;
   font-size: 16px; }
@@ -27,6 +27,7 @@ h2 {
 .item .col-md-7 {
   padding-right: 0px; }
 
+<<<<<<< Updated upstream
 /*---Small block---*/
 .item .col-md-4 {
   padding-top: 10px;
@@ -48,6 +49,8 @@ h2 {
   text-shadow: 2px 2px 3px #c1cdcd;
   font-family: helvetica, sans-serif; }
 
+=======
+>>>>>>> Stashed changes
 .item .text-center {
   clear: both; }
 
@@ -64,6 +67,48 @@ h2 {
   font-family: helvetica, sans-serif;
   font-size: 16px; }
 
+<<<<<<< Updated upstream
+=======
+.item .button_slider
+{
+    margin-top: 50px;
+    margin-bottom:30px;
+}
+
+.item .btn a
+{
+    color:#373737;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+}
+.item button
+{
+    border: 1px solid green;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 2px #969696;
+    -moz-box-shadow: 2px 2px 2px #969696;
+    box-shadow: 2px 2px 2px #969696;
+    background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+    outline: 0;
+}
+.item .btn a {
+  color: #373737;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: helvetica, sans-serif;
+  font-size: 16px; }
+
+>>>>>>> Stashed changes
 .item button {
   border: 1px solid green;
   padding: 10px 20px 10px 20px;
@@ -79,6 +124,59 @@ h2 {
   background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
   background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
   outline: 0; }
+<<<<<<< Updated upstream
+=======
+.item .btn a
+{
+    color:#373737;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+}
+.item button
+{
+    border: 1px solid green;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 2px #969696;
+    -moz-box-shadow: 2px 2px 2px #969696;
+    box-shadow: 2px 2px 2px #969696;
+    background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+    outline: 0;
+}
+
+.item button:hover
+{   border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 2px #969696;
+    -moz-box-shadow: 1px 1px 2px #969696;
+    box-shadow: 1px 1px 2px #969696;
+    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+}
+
+.item button:active
+{   border-radius: 5px;
+    text-shadow: 1px 1px 2px #969696;
+    -webkit-box-shadow: -1px -1px 2px #969696;
+    -moz-box-shadow: -1px -1px 2px #969696;
+    box-shadow: -1px -1px 2px #969696;
+    background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+    background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+}
+>>>>>>> Stashed changes
 
 .item button:hover {
   border-radius: 5px;
