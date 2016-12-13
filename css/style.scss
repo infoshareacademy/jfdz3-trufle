@@ -485,5 +485,52 @@ button:active
   background-image: -ms-linear-gradient(to bottom, $green, $turkus);
   background-image: linear-gradient(to bottom, $green, $turkus);
 }
+.details-footer button {
+  margin-bottom: 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  color: $grey;
+  font-weight: 700;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  border: 1px solid #6BC29D;
+  //text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+  background-image: -webkit-linear-gradient(to top, $green, $turkus);
+  background-image: -moz-linear-gradient(to top, $green, $turkus);
+  background-image: -o-linear-gradient(to top, $green, $turkus);
+  background-image: -ms-linear-gradient(to top, $green, $turkus);
+  background-image: linear-gradient(to top, $green, $turkus);
+  outline: 0;
+
+  .details-footer button:hover {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    -webkit-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    -moz-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    background-image: -webkit-linear-gradient(to bottom, $green, $turkus);
+    background-image: -moz-linear-gradient(to bottom, $green, $turkus);
+    background-image: -o-linear-gradient(to bottom, $green, $turkus);
+    background-image: -ms-linear-gradient(to bottom, $green, $turkus);
+    background-image: linear-gradient(to bottom, $green, $turkus);
+  }
+  .details-footer button:active
+  { border-radius:20px;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+    -webkit-box-shadow: -1px -1px 2px rgba(150, 150, 150, 1);
+    -moz-box-shadow: -1px -1px 2px rgba(150,150,150,1);
+    box-shadow: -1px -1px 2px rgba(150,150,150,1);
+    background-image: -webkit-linear-gradient(to bottom, $green, $turkus);
+    background-image: -moz-linear-gradient(to bottom, $green, $turkus);
+    background-image: -o-linear-gradient(to bottom, $green, $turkus);
+    background-image: -ms-linear-gradient(to bottom, $green, $turkus);
+    background-image: linear-gradient(to bottom, $green, $turkus);
+  }
+
 
 
