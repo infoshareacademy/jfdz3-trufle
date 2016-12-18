@@ -17,11 +17,31 @@
     <!--***********Smooth menu slide/scroll***********-->
     <script>
         $(document).ready(function () {
-            $(document).on('click', 'a', function (event) {
+            $(document).on('click', '.navbar a', function (event) {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: $($.attr(this, 'href')).offset().top
                 }, 500);
+            });
+        });
+    </script>
+    <script>
+        jQuery("document").ready(function($){
+
+            var nav = $('.navbar');
+            var main = $('main');
+            var logo = $('.navbar-default .navbar-brand');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 136) {
+                    nav.addClass("navScroll");
+                    logo.css('font-size', '1em');
+                    main.addClass("navScroll_marginTop");
+                } else {
+                    nav.removeClass("navScroll");
+                    logo.css('font-size', '1em');
+                    main.removeClass("navScroll_marginTop");
+                }
             });
         });
     </script>
@@ -31,8 +51,7 @@
 </head>
 <body>
 <div class="container content"><!--content-all-->
-    <header class="">
-        <div  class="row">
+    <header class="row" id="home">
         <nav class="navbar navbar-default">
             <div class="">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,7 +67,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#functions">Functions</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#details">Details</a></li>
@@ -57,8 +76,8 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        </div>
     </header>
+    <div style="clear: both;"></div>
     <main>
         <!--SLIDER-->
 
