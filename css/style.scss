@@ -95,7 +95,7 @@ h2 {
 .item button
 {
   border: 1px solid green;
-  padding: 10px 20px 10px 20px;
+  padding: 15px 20px 15px 20px;
   button: 2em;
   border-radius: 5px;
   cursor: pointer;
@@ -506,6 +506,7 @@ button:active
   background-image: -ms-linear-gradient(to top, $green, $turkus);
   background-image: linear-gradient(to top, $green, $turkus);
   outline: 0;
+}
 
   .details-footer button:hover {
     margin-top: 2px;
