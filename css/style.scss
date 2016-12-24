@@ -245,6 +245,12 @@ main{
   color: $brown;
   font-weight: 700;
 }
+.navbar-brad img{
+  width: 210px;
+  height: auto;
+
+}
+
 .navbar{
   margin: 0;
   padding: 2em 2em 2em 0;
@@ -276,6 +282,13 @@ main{
   .navbar-collapse ul li:hover a{
     color: #83E6CE;
   }
+}
+
+.navbar-logo img{
+  width: 210px;
+  height: auto;
+  padding-left: 50px;
+
 }
 
 .product-info {
