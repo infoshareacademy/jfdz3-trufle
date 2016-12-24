@@ -96,7 +96,6 @@ h2 {
 {
   border: 1px solid green;
   padding: 15px 20px 15px 20px;
-  button: 2em;
   border-radius: 5px;
   cursor: pointer;
   -webkit-box-shadow: 2px 2px 2px #969696;
@@ -245,10 +244,21 @@ main{
   color: $brown;
   font-weight: 700;
 }
-.navbar-brad img{
-  width: 210px;
+.navbar-logo img{
+  width: 242px;
   height: auto;
+  margin-left:50px;
+  margin-right:40px;
 
+}
+.navbar-nav{
+  margin-top: 25px;
+}
+.navbar-toggle {
+  margin-top: 32px;
+}
+.navbar-toggle:hover{
+  margin-top: 31px;
 }
 
 .navbar{
@@ -282,13 +292,6 @@ main{
   .navbar-collapse ul li:hover a{
     color: #83E6CE;
   }
-}
-
-.navbar-logo img{
-  width: 210px;
-  height: auto;
-  padding-left: 50px;
-
 }
 
 .product-info {
@@ -520,7 +523,6 @@ button:active
   background-image: linear-gradient(to top, $green, $turkus);
   outline: 0;
 }
-
   .details-footer button:hover {
     margin-top: 2px;
     margin-bottom: 0px;
