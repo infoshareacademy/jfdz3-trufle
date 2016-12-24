@@ -202,9 +202,19 @@ h2 {
     color: #83E6CE; }
 
 .navbar-logo img {
-  width: 210px;
+  width: 242px;
   height: auto;
-  padding-left: 50px; }
+  margin-left: 50px;
+  margin-right: 50px; }
+
+.navbar-nav {
+  margin-top: 25px; }
+
+.navbar-toggle {
+  margin-top: 32px; }
+
+.navbar-toggle:hover {
+  margin-top: 31px; }
 
 .product-info {
   background: #83E6CE;
