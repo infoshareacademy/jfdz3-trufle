@@ -3,7 +3,9 @@
  */
 
 document.querySelector('.fa-caret-square-o-up').addEventListener("click", ()=> {
-    scrollTo(0,0);
+
+        $('html,body').animate({scrollTop:0},'slow')
+
 });
 
 
