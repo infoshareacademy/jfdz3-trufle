@@ -547,6 +547,21 @@ button:active
     background-image: -ms-linear-gradient(to bottom, $green, $turkus);
     background-image: linear-gradient(to bottom, $green, $turkus);
   }
+/*# sourceMappingURL=style.css.map */
+/*NEWSLETTER*/
 
-
+#task{
+  font-size: 24px;
+  font-style: italic;
+  border: 1px solid gray;
+  background:url(../img/strip.jpg) no-repeat;
+  padding: 4px 10px 3px 10px;
+  margin: 1px 10px 1px 10px;
+}
+#quantity{
+  width: 80px;
+  font-size: 24px;
+  font-style: italic;
+  padding: 0px 10px 0px 10px;
+}
 
