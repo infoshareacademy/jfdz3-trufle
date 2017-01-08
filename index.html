@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/css-reset.css">
+    <link rel="icon" href="./img/train_fav.png" type="image/png" sizes="16x16">
+
     <title>Trufle</title>
 
     <!--***********bootstrap CSS***********-->
@@ -17,7 +19,7 @@
     <!--***********Smooth menu slide/scroll***********-->
     <script>
         $(document).ready(function () {
-           $(document).on('click', '.navbar a', function (event) {
+            $(document).on('click', '.navbar a', function (event) {
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: $($.attr(this, 'href')).offset().top
@@ -32,31 +34,32 @@
 <body>
 <div class="container content"><!--content-all-->
     <header class="">
-        <div  class="row">
-        <nav class="navbar navbar-default">
-            <div class="">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-logo" href="#"><img src="img/trufle.gif"></a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#functions">Functions</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#details">Details</a></li>
-                        <li><a href="#newsletter">Newsletter</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+        <div class="row">
+            <nav class="navbar navbar-default">
+                <div class="">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-logo" href="#"><img src="img/trufle.gif"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#functions">Functions</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#details">Details</a></li>
+                            <li><a href="#newsletter">Newsletter</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
         </div>
     </header>
     <main>
@@ -64,7 +67,7 @@
 
 
         <div class="slider_container row">
-              <div class="slider_blok">
+            <div class="slider_blok">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                     <!-- Сursor -->
                     <ol class="carousel-indicators">
@@ -79,15 +82,16 @@
                             <div class="col-md-4  col-sm-12 col-xs-12 col-md-offset-1 photo_one">
                                 <div class="text-center">
                                     <h1>Tramwaj</h1>
-                                    <p >Trasy tramwajowe w Gdańsku</p>
+                                    <p>Trasy tramwajowe w Gdańsku</p>
                                 </div>
                                 <div class="button_slider">
-                                    <button type="button" class="btn btn-default center-block"><a href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
+                                    <button type="button" class="btn btn-default center-block"><a
+                                            href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
                                 </div>
                             </div>
                             <div class="col-md-7 ">
                                 <a href="http://www.ztm.gda.pl/hmvc/">
-                                    <img  class="img-responsive" src="img/tramwaj.png" alt="tramwaj">
+                                    <img class="img-responsive" src="img/tramwaj.png" alt="tramwaj">
                                 </a>
                             </div>
                             <div class="carousel-caption">
@@ -101,7 +105,8 @@
                                     <p>Linie autobusowe w Gdańsku</p>
                                 </div>
                                 <div class="button_slider">
-                                    <button type="button" class="btn btn-default center-block"><a href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
+                                    <button type="button" class="btn btn-default center-block"><a
+                                            href="http://www.ztm.gda.pl/hmvc/">Dowiedz się więcej</a></button>
                                 </div>
                             </div>
                             <div class="col-md-7 ">
@@ -121,7 +126,8 @@
                                     <p>Rozkład jazdy w Trójmieście</p>
                                 </div>
                                 <div class="button_slider">
-                                    <button type="button" class="btn btn-default  center-block"><a href="http://skm.trojmiasto.pl/">Dowiedz się więcej</a></button>
+                                    <button type="button" class="btn btn-default  center-block"><a
+                                            href="http://skm.trojmiasto.pl/">Dowiedz się więcej</a></button>
                                 </div>
                             </div>
 
@@ -134,16 +140,16 @@
                             </div>
                         </div>
 
-                    <!-- Control elements -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                        <!-- Control elements -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!--FUNCTIONS-->
@@ -151,44 +157,44 @@
             <h2>Functions</h2>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-road"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-road"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-car"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-car"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-clock-o"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-clock-o"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-road"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-road"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-car"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-car"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4">
                 <div>
-                <i class="fa fa-clock-o"></i>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum
-                    Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <i class="fa fa-clock-o"></i>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum
+                        Lorem ipsum Lorem ipsum Lorem ipsum </p>
                 </div>
             </div>
 
@@ -298,7 +304,7 @@
                 <form action="#" method="post">
                     <span id="task"></span>
                     <input type="text" id="quantity" placeholder="Suma" required '>
-                    <input type="submit" value="Sprawdzić"  onclick="someFunc()"><br>
+                    <input id='test_button' type="submit" value="Sprawdzić"  onclick="someFunc()"><br>
                     <input type="email" name="email" id="email" placeholder="john@mail.com" required disabled><br>
                     <button type="submit">Subscribe for newsletter!</button>
                 </form>
@@ -308,11 +314,16 @@
         <!--SOCIALS-->
         <footer class="row ">
             <h3>Visit us on...</h3>
-            <a href="#"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://web.facebook.com/SzybkaKolejMiejska/?_rdr" target="_blank"><i
+                    class="fa fa-facebook-official"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-google-plus-official"></i></a>
             <a href="#"><i class="fa fa-youtube"></i></a>
-            <div class="rights"><p>&copy;All rights reserved!&reg;</p></div>
+            <div class="rights">
+                <p>&copy;All rights reserved!&reg;</p>
+                <a href="#"><i class="fa fa-caret-square-o-up fa-2x"></i></a>
+            </div>
+
         </footer>
     </main>
     <!--***********newsletter JS***********-->
@@ -346,5 +357,8 @@
 
 <!--***********bootstrap JS***********-->
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="javascript/main.js"></script>
+
+
 </body>
 </html>
