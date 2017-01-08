@@ -304,7 +304,7 @@
                 <form action="#" method="post">
                     <span id="task"></span>
                     <input type="text" id="quantity" placeholder="Suma" required '>
-                    <input id='test_button' type="submit" value="Sprawdzić"  onclick="someFunc()"><br>
+                    <input id='test_button' type="submit" value="Sprawdzić" onclick="someFunc()"><br>
                     <input type="email" name="email" id="email" placeholder="john@mail.com" required disabled><br>
                     <button type="submit">Subscribe for newsletter!</button>
                 </form>
@@ -329,26 +329,25 @@
     <!--***********newsletter JS***********-->
     <script>
         // function to generate random numbers in the range m to n
-        function randomNumber(m,n){
+        function randomNumber(m, n) {
             m = parseInt(m);
             n = parseInt(n);
-            return Math.floor( Math.random() * (n - m + 1) ) + m;
-        };
+            return Math.floor(Math.random() * (n - m + 1)) + m;
+        }
+        ;
 
-        var numberA = randomNumber(1,10); // generated number
-        var numberB = randomNumber(1,10); // generated number
+        var numberA = randomNumber(1, 10); // generated number
+        var numberB = randomNumber(1, 10); // generated number
 
         document.getElementById('task').innerHTML = numberA + ' + ' + numberB + ' = '; // the user sees the expression
-        function someFunc(){
+        function someFunc() {
             var totalAB = numberA + numberB;  // calculated total
             var quantity = document.getElementById("quantity").value; // Объявляем переменную равную значению введенному в поле количество
 
-            if(totalAB == quantity)
-            {
+            if (totalAB == quantity) {
                 document.getElementById("email").disabled = false;
             }
-            else
-            {
+            else {
                 alert('Summa podana nie poprawnie! Spróbuj ponownie!');
                 event.preventDefault();
                 document.getElementById("email").disabled = true;
@@ -356,9 +355,10 @@
         }
     </script>
 
-<!--***********bootstrap JS***********-->
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="javascript/main.js"></script>
+    <!--***********bootstrap JS***********-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/slawek.js"></script>
 
 
 </body>
