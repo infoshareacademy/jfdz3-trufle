@@ -1,72 +1,521 @@
-/*
-Error: Invalid CSS after "...a(226,226,226,0": expected ")", was ".);"
-        on line 555 of style.scss
+body {
+  font-family: new helvetica, monospace;
+  font-size: 16px; }
 
-550:   background:url(../img/header_newsletter.png) no-repeat;
-551:   padding-bottom: 0px;
-552: 
-553: }
-554: #newsletter_forma{
-555:   background: rgba(226,226,226,0.);
-556:   border-radius: 20px;
-557:   margin-top: 50px;
-558:   margin-bottom: 50px;
-559: }
-560: #newsletter_forma:hover{
+h2 {
+  padding: 1em;
+  font-size: 3em;
+  font-weight: 700;
+  color: #593216; }
 
-Backtrace:
-style.scss:555
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/lexer.rb:229:in `expected!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:717:in `assert_tok'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:541:in `funcall'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:520:in `ident'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_not'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_div'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_minus'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:309:in `unary_plus'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `times_div_or_mod'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `plus_or_minus'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `relational'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `eq_or_neq'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `and_expr'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:286:in `or_expr'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:494:in `space'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:434:in `interpolation'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:359:in `expr'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:708:in `assert_expr'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/parser.rb:75:in `parse'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1063:in `sass_script'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:909:in `value!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:778:in `block in try_declaration'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:1183:in `rethrow'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:791:in `try_declaration'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/scss:13:in `<top (required)>'
-C:/Ruby23/bin/scss:22:in `load'
-C:/Ruby23/bin/scss:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...a(226,226,226,0\": expected \")\", was \".);\"\A         on line 555 of style.scss\A \A 550:   background:url(../img/header_newsletter.png) no-repeat;\A 551:   padding-bottom: 0px;\A 552: \A 553: }\A 554: #newsletter_forma{\A 555:   background: rgba(226,226,226,0.);\A 556:   border-radius: 20px;\A 557:   margin-top: 50px;\A 558:   margin-bottom: 50px;\A 559: }\A 560: #newsletter_forma:hover{"; }
+/*---Slider---*/
+.slider_container {
+  background-color: #eaeaea; }
+
+.slider_container .slider_blok {
+  background: linear-gradient(to bottom left, #fffff0, #d6fcfc);
+  padding-left: 0;
+  padding-right: 0; }
+
+.slider_container .slider_blok:hover {
+  background: linear-gradient(to bottom right, #fffff0, #d6fcfc);
+  padding-left: 0;
+  padding-right: 0; }
+
+/*---Big block---*/
+.item .col-md-7 {
+  padding-right: 0px; }
+
+/*---Small block---*/
+.item .col-md-4 {
+  padding-top: 10px;
+  line-height: 1;
+  padding-bottom: 40px; }
+
+.item .col-md-4 h1 {
+  font-weight: bold;
+  color: #83e6ce;
+  font-size: 45px;
+  font-family: helvetica, sans-serif;
+  text-shadow: 2px 2px 3px #c1cdcd; }
+
+.item .col-md-4 p {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #1e1b1a;
+  font-size: 20px;
+  text-shadow: 2px 2px 3px #c1cdcd;
+  font-family: helvetica, sans-serif; }
+
+.item .text-center {
+  clear: both; }
+
+/*---Button---*/
+.item .button_slider {
+  margin-top: 50px;
+  margin-bottom: 30px; }
+
+.item .btn a {
+  color: #373737;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: helvetica, sans-serif;
+  font-size: 16px; }
+
+.item button {
+  border: 1px solid green;
+  padding: 15px 20px 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 2px #969696;
+  -moz-box-shadow: 2px 2px 2px #969696;
+  box-shadow: 2px 2px 2px #969696;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+  outline: 0; }
+
+.item button:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+.item button:active {
+  border-radius: 5px;
+  text-shadow: 1px 1px 2px #969696;
+  -webkit-box-shadow: -1px -1px 2px #969696;
+  -moz-box-shadow: -1px -1px 2px #969696;
+  box-shadow: -1px -1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+/*---The side buttons of the slider----*/
+.carousel-control {
+  width: 5%; }
+
+.carousel-control:hover {
+  width: 6%; }
+
+.carousel-indicators li {
+  border: 1px solid #c8c8c8; }
+
+.carousel-indicators li:hover {
+  background-color: #c8c8c8; }
+
+.carousel-control.left {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.2); }
+
+.carousel-control.right {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.2); }
+
+.carousel-control.left:hover {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.3); }
+
+.carousel-control.right:hover {
+  background-image: none;
+  background-color: rgba(232, 232, 232, 0.3); }
+
+/*----Photo Transport----*/
+.item .img-responsive {
+  opacity: 0.95; }
+
+.item .img-responsive:hover {
+  opacity: 1; }
+
+/*----Media----*/
+@media (max-width: 992px) {
+  .item .img-responsive {
+    display: none; } }
+@media (min-width: 450px) and (max-width: 992px) {
+  .photo_one {
+    background: url(../img/tramwaj1.png) no-repeat; }
+
+  .photo_two {
+    background: url(../img/bus1.png) no-repeat; }
+
+  .photo_three {
+    background: url(../img/train1.png) no-repeat; } }
+@media (min-width: 273px) and (max-width: 450px) {
+  .photo_one, .photo_two, .photo_three {
+    background: url(../img/godlo.png) center no-repeat; } }
+/*---End Slider---*/
+.content {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 35px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 35px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 35px -9px rgba(0, 0, 0, 0.75); }
+
+.navbar-default .navbar-brand {
+  font-size: 3em;
+  margin: 0 0 0 1em;
+  color: #593216;
+  font-weight: 700; }
+
+.navbar-logo img {
+  width: 242px;
+  height: auto;
+  margin-left: 50px;
+  margin-right: 40px; }
+
+.navbar-nav {
+  margin-top: 25px; }
+
+.navbar-toggle {
+  margin-top: 32px; }
+
+.navbar-toggle:hover {
+  margin-top: 31px; }
+
+.navbar {
+  margin: 0;
+  padding: 2em 2em 2em 0;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-top-right-radius: 20px;
+  border-top-right-radius: 20px; }
+  .navbar ul li {
+    font-size: 1.1em;
+    font-weight: 700;
+    background: #698799;
+    padding: .5em 2em;
+    margin: .5em;
+    font-family: helvetica, serif;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px; }
+  .navbar ul li:hover {
+    background: #546c7b;
+    cursor: pointer; }
+  .navbar .navbar-collapse ul li a {
+    padding: 0;
+    color: #e2e2e2; }
+  .navbar .navbar-collapse ul li:hover a {
+    color: #83E6CE; }
+
+.product-info {
+  background: #83E6CE;
+  text-align: center;
+  padding: 1em 0 3em 0;
+  margin-top: -3px; }
+  .product-info i {
+    font-size: 3em; }
+  .product-info div > div {
+    margin: 5%;
+    padding: 3%;
+    border: 1px dashed #593216;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-transition: background 0.8s linear;
+    -moz-transition: background 0.8s linear;
+    -ms-transition: background 0.8s linear;
+    -o-transition: background 0.8s linear; }
+  .product-info div > div:hover {
+    background: #757575;
+    color: #83E6CE; }
+
+.team {
+  text-align: center;
+  background: #e2e2e2; }
+  .team > div {
+    margin-bottom: 3em;
+    color: #000000;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s; }
+  .team > div:hover {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+    transform: rotateZ(180deg); }
+  .team > div img {
+    max-width: 150px;
+    background: #ffffff;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border-radius: 45px;
+    padding: 20px;
+    margin: 0 0 2em 0;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s; }
+  .team > div:hover img {
+    -webkit-transform: rotateZ(-180deg);
+    -moz-transform: rotateZ(-180deg);
+    -ms-transform: rotateZ(-180deg);
+    -o-transform: rotateZ(-180deg);
+    transform: rotateZ(-180deg); }
+  .team > div p {
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s; }
+  .team > div:hover p {
+    transform: rotateX(180deg) rotateY(180deg); }
+
+.details {
+  background-color: #83E6CE;
+  text-align: center; }
+  .details .details-header {
+    background-color: #e2e2e2;
+    text-align: center;
+    padding-top: 20px;
+    margin: inherit; }
+  .details .details-body {
+    background-color: #e2e2e2;
+    margin: 1%;
+    padding: 10%;
+    text-align: justify; }
+  .details .details-footer {
+    margin-top: 30px;
+    text-align: center; }
+
+.subscribe {
+  text-align: center;
+  padding-bottom: 5em; }
+  .subscribe form {
+    text-align: center; }
+  .subscribe input {
+    width: 70%;
+    font-size: 1.5em;
+    color: #593216;
+    padding: 5px 10px;
+    text-align: center;
+    margin-bottom: 1em; }
+
+footer {
+  background: #83E6CE;
+  text-align: center;
+  padding: .5em 0 0 0;
+  font-size: 5em;
+  position: relative;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; }
+  footer h3 {
+    font-size: .4em; }
+  footer a {
+    color: #593216; }
+  footer a:hover {
+    color: #593216; }
+  footer i {
+    margin: 0 20px 1em 0;
+    -webkit-transition: transform 0.4s linear;
+    -moz-transition: transform 0.4s linear;
+    -ms-transition: transform 0.4s linear;
+    -o-transition: transform 0.4s linear; }
+  footer .rights {
+    width: 100%;
+    text-align: center;
+    font-size: .2em;
+    padding: 2em 0 1em 0;
+    position: absolute; }
+
+footer i:hover {
+  transform: rotateZ(360deg); }
+
+button {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  color: #757575;
+  font-weight: 700;
+  padding: 1em 4em;
+  cursor: pointer;
+  border: 1px solid #6BC29D;
+  -webkit-box-shadow: 2px 2px 2px #969696;
+  -moz-box-shadow: 2px 2px 2px #969696;
+  box-shadow: 2px 2px 2px #969696;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+  outline: 0; }
+
+button:hover {
+  margin-bottom: 0px;
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+button:active {
+  border-radius: 20px;
+  text-shadow: 1px 1px 2px #969696;
+  -webkit-box-shadow: -1px -1px 2px #969696;
+  -moz-box-shadow: -1px -1px 2px #969696;
+  box-shadow: -1px -1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+.details-footer button {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-size: 1.5em;
+  color: #757575;
+  font-weight: 700;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  border: 1px solid #6BC29D;
+  -webkit-box-shadow: 2px 2px 2px #969696;
+  -moz-box-shadow: 2px 2px 2px #969696;
+  box-shadow: 2px 2px 2px #969696;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+  outline: 0; }
+
+.details-footer button:hover {
+  margin-bottom: 0px;
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+.details-footer button:active {
+  border-radius: 20px;
+  text-shadow: 1px 1px 2px #969696;
+  -webkit-box-shadow: -1px -1px 2px #969696;
+  -moz-box-shadow: -1px -1px 2px #969696;
+  box-shadow: -1px -1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
+
+/*# sourceMappingURL=style.css.map */
+/*NEWSLETTER*/
+#newsletter {
+  background: url(../img/header_newsletter.png) no-repeat;
+  padding-bottom: 0px; }
+
+#newsletter_forma {
+  background: rgba(226, 226, 226, 0.3);
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+#newsletter_forma:hover {
+  background: rgba(226, 226, 226, 0.6); }
+
+#newsletter_forma h2 {
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 34px; }
+
+#newsletter_forma h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 20px; }
+
+#button_form {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 38px;
+  padding-right: 38px; }
+
+#letter {
+  margin-left: 10px; }
+
+#task {
+  font-size: 24px;
+  font-style: italic;
+  border: 1px solid gray;
+  background: url(../img/strip.jpg) no-repeat;
+  padding: 4px 10px 4px 10px;
+  margin: 1px 10px 1px 0px; }
+
+#quantity {
+  width: 80px;
+  font-size: 24px;
+  padding: 0px 10px 0px 10px; }
+
+#test_button {
+  width: auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  color: #757575;
+  font-weight: 500;
+  padding: 1px 20px;
+  cursor: pointer;
+  border: 1px solid #6BC29D;
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
+  outline: 0;
+  margin-bottom: 15px; }
+
+#test_button:hover {
+  -webkit-box-shadow: 1px 1px 2px #969696;
+  -moz-box-shadow: 1px 1px 2px #969696;
+  box-shadow: 1px 1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  margin-bottom: 15px; }
+
+#test_button:active {
+  -webkit-box-shadow: -1px -1px 2px #969696;
+  -moz-box-shadow: -1px -1px 2px #969696;
+  box-shadow: -1px -1px 2px #969696;
+  background-image: -webkit-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
+  margin-bottom: 15px; }
+
+/*# sourceMappingURL=style.css.map */
