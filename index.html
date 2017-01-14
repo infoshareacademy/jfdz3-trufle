@@ -35,7 +35,7 @@
 <div class="container content"><!--content-all-->
     <header class="">
         <div class="row">
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default navbar-background">
                 <div class="">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -273,7 +273,7 @@
                     at
                     blanditiis consectetur dignissimos doloremque enim esse fugiat iusto minus mollitia, neque odit
                     quasi
-                    quibusdam quis quos tenetur veritatis voluptates.
+                    quibusdam quis quos tenetur.
                 </div>
                 <div class="details-footer">
                     <button>Dodatkowe Informacje</button>
@@ -350,6 +350,7 @@
             else
             {
                 alert('Summa podana nie poprawnie! Spróbuj ponownie!');
+                event.preventDefault();
                 document.getElementById("email").disabled = true;
             }
         }

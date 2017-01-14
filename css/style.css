@@ -184,6 +184,7 @@ h2 {
   margin-top: 31px; }
 
 .navbar {
+  background-image: url(../img/trains.png);
   margin: 0;
   padding: 2em 2em 2em 0;
   -webkit-border-top-left-radius: 20px;
