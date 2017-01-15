@@ -86,6 +86,10 @@ window.onload = function () {
         }
         /****** GOOGLE MAP END ******/
 
+        /** Google Map 2 **/
+        $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKljXf4TroNrn0vwSpdLiC5bZF1htiO9Y&callback=initMap" async defer></script>');
+        /** Google Map 2 END **/
+
     }; //end of displayCountries
 
     getAllCountriesFromApi(displayCountries);
@@ -104,3 +108,22 @@ function getAllCountriesFromApi(callback) {
     xhttp.send() ;
 
 }
+/** INIT Google Map 2 **/
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: new google.maps.LatLng(30,0),
+        zoom: 2,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var layer = new google.maps.FusionTablesLayer({
+        query: {
+            select: 'geometry',
+            from: '1N2LBk4JHwWpOY4d9fobIn27lfnZ5MDy-NoqqRpk',
+            where: "ISO_2DIGIT IN ('US', 'GB', 'DE', 'PL')"
+        },
+        map: map,
+        suppressInfoWindows: true
+    });
+    layer.setMap(map);
+}/** INIT Google Map 2 END **/
