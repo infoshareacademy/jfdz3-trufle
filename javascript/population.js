@@ -17,7 +17,7 @@ window.onload = function () {
         $("input").prop('disabled', false); // disabel input.range before load data
 
         var random = Math.floor((Math.random() * 250) + 1); // random number from 1 to 250 (250 = all cuntires)
-        var countrieQuest = countrie[random]; // random countrie to the game 178 = Poland index
+        var countrieQuest = countrie[48]; // random countrie to the game 178 = Poland index
         var population = countrieQuest.population; // select population of the countrieQuest
 
         console.log(population);
@@ -104,4 +104,5 @@ function getAllCountriesFromApi(callback) {
     };
     xhttp.open("GET", "https://restcountries.eu/rest/v1/all", true);
     xhttp.send() ;
+
 }
