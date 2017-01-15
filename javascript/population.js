@@ -17,13 +17,9 @@ window.onload = function () {
         $("input").prop('disabled', false); // disabel input.range before load data
 
         var random = Math.floor((Math.random() * 250) + 1); // random number from 1 to 250 (250 = all cuntires)
-        var countrieQuest = countrie[48]; // random countrie to the game 178 = Poland index
+        var countrieQuest = countrie[random]; // random countrie to the game 178 = Poland index
         var population = countrieQuest.population; // select population of the countrieQuest
 
-        console.log(population);
-        var poland = countrie.filter(function( obj ) {
-            return obj.name == 'Poland';
-        });
         console.log('code: ' + countrieQuest.code + '\nKraj: ' + countrieQuest.name + ' \nStolica:' + countrieQuest.capitol);
 
         $('#countryQuest').html(' ' + countrieQuest.name); // insert name of countrie
@@ -81,13 +77,15 @@ window.onload = function () {
                 [countrieQuest.name, countrieQuest.population]
             ]);
 
-            var options = {};
+            var options = {tooltip: {trigger: 'none'},
+                            legend: {textStyle: {fontSize: .1} }};
 
             var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
             chart.draw(data, options);
         }
-        /****** GOOGLE  MAP END ******/
+        /****** GOOGLE MAP END ******/
+
     }; //end of displayCountries
 
     getAllCountriesFromApi(displayCountries);
