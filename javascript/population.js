@@ -1,6 +1,6 @@
 var random = Math.floor((Math.random() * 250) + 1); // random number from 1 to 250 (250 = all cuntires)
 // random = 178; // index Polski
-/** INIT Google Map 2 **/
+/** INIT Google Map **/
 
 function initMap() {
 
@@ -72,17 +72,39 @@ window.onload = function () {
                 code: countrie.numericCode,
                 name: countrie.name,
                 capitol: countrie.capital,
-                population: countrie.population
+                population: countrie.population,
+                latlng: countrie.latlng,
+                shortName: countrie.alpha2Code,
+                area: countrie.area,
+                phoneCode: countrie.callingCodes,
+                region: countrie.region,
+                nameTranslations: countrie.translations,
+                borders: countrie.borders,
+                nativeName: countrie.nativeName,
+                currencies: countrie.currencies,
+                languages: countrie.languages
             }
         })
 
         $("input").prop('disabled', false); // disabel input.range before load data
 
-        // var random = Math.floor((Math.random() * 250) + 1); // random number from 1 to 250 (250 = all cuntires)
         var countrieQuest = countrie[random]; // random countrie to the game 178 = Poland index
         var population = countrieQuest.population; // select population of the countrieQuest
+        var nameTranslations = countrieQuest.nameTranslations.de + ', ' + countrieQuest.nameTranslations.es + ', ' + countrieQuest.nameTranslations.fr + ', ' + countrieQuest.nameTranslations.ja + ', ' + countrieQuest.nameTranslations.it;
 
-        console.log('code: ' + countrieQuest.code + '\nKraj: ' + countrieQuest.name + ' \nStolica:' + countrieQuest.capitol);
+        var countrieData = ('<tr><td>Kod</td><td>' + countrieQuest.code + '</td>' +
+            '</td></tr><tr><td>Stolica</td><td>' + countrieQuest.capitol + '</td>' +
+            '</td></tr><tr><td>Powierzchnia</td><td>' + countrieQuest.area + 'km<sup>2</sup></td>' +
+            '</td></tr><tr><td>Kod telefoniczny</td><td>+' + countrieQuest.phoneCode + '</td>' +
+            '</td></tr><tr><td>Region</td><td>' + countrieQuest.region + '</td>' +
+            '</td></tr><tr><td>Tłumaczenia</td><td>' + nameTranslations + '</td>' +
+            '</td></tr><tr><td>Sąsiedzi</td><td>' + countrieQuest.borders + '</td>' +
+            '</td></tr><tr><td>Lokalna nazwa</td><td>' + countrieQuest.nativeName + '</td>' +
+            '</td></tr><tr><td>Waluta</td><td>' + countrieQuest.currencies + '</td>' +
+            '</td></tr><tr><td>Języki</td><td>' + countrieQuest.languages +
+            '</td></tr>'
+        );
+        console.log(countrieQuest);
 
         $('#countryQuest').html(' ' + countrieQuest.name); // insert name of countrie
         minVal = Math.round(population / 1000) * 1000 / 10; // radnom MIN value of population to choose
@@ -91,6 +113,9 @@ window.onload = function () {
         $('#minPop').html(numeral(minVal).format('0,000.00a')); // display MIN value before input.range
         $('#myRange').attr('max', maxVal); // add MAX value attribute to input.range
         $('#maxPop').html(numeral(maxVal).format('0,000.00a')); // display MAX value before input.range
+
+        $('#countrieQuestion').append(countrieQuest.name);
+        $('#countrieData').append(countrieData);
 
         console.log($('#myRange').attr('min'));
         console.log($('#myRange').attr('max'));
@@ -123,40 +148,13 @@ window.onload = function () {
                 alert('BUuu cienias!')
             }
         });
-        /** CHECK CORRECT ANSWER **/
-
-
-        /*        /!************************
-         ***** GOOGLE  MAP ******
-         ************************!/
-         google.charts.load('upcoming', {'packages': ['geochart']});
-         google.charts.setOnLoadCallback(drawRegionsMap);
-
-         function drawRegionsMap() {
-
-         var data = google.visualization.arrayToDataTable([
-         ['Country', 'Population'],
-         [countrieQuest.name, countrieQuest.population]
-         ]);
-
-         var options = {
-         tooltip: {trigger: 'none'},
-         legend: {textStyle: {fontSize: .1}}
-         };
-
-         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
-
-         chart.draw(data, options);
-         }
-
-         /!****** GOOGLE MAP END ******!/*/
+        /** CHECK CORRECT ANSWER END **/
 
         /** Google Map 2 **/
         $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKljXf4TroNrn0vwSpdLiC5bZF1htiO9Y&callback=initMap" async defer></script>');
         /** Google Map 2 END **/
 
 
-    }; //end of displayCountries
-    // initMap(50,20);
+    };
     getAllCountriesFromApi(displayCountries);
 };
