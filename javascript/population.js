@@ -89,6 +89,16 @@ window.onload = function () {
         $("input").prop('disabled', false); // disabel input.range before load data
 
         var countrieQuest = countrie[random]; // random countrie to the game 178 = Poland index
+        if (countrie[random].region == 'Asia'){
+            console.log(countrie[random].region + 'Azja')
+        }else if (countrie[random].region == 'Europe'){
+            console.log(countrie[random].region + 'Europa')
+        }else if (countrie[random].region == 'Africa'){
+            console.log(countrie[random].region + 'Afryka')
+        }else if (countrie[random].region == 'Americas'){
+            console.log(countrie[random].region + 'Ameryka')
+        }else console.log(countrie[random].region + 'Oceania')
+
         var population = countrieQuest.population; // select population of the countrieQuest
         var nameTranslations = countrieQuest.nameTranslations.de + ', ' + countrieQuest.nameTranslations.es + ', ' + countrieQuest.nameTranslations.fr + ', ' + countrieQuest.nameTranslations.ja + ', ' + countrieQuest.nameTranslations.it;
 
@@ -141,11 +151,15 @@ window.onload = function () {
             var answer = $('#myRange').val();
             if (answer > minRightAnswer && answer < maxRightAnswer) {
                 console.log('DOBRZE!');
-                alert('WYGRAŁEŚ!')
+                $('#wrong').hide();
+                $('#correct').fadeIn('slow');
+                $('#countrieData').fadeIn("slow");
 
             } else {
                 console.log('ŹLE!');
-                alert('BUuu cienias!')
+                $('#correct').hide();
+                $('#countrieData').hide();
+                $('#wrong').fadeIn('slow');
             }
         });
         /** CHECK CORRECT ANSWER END **/
