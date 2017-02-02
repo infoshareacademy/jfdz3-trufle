@@ -412,9 +412,7 @@ h2 {
   }
 }
 .details {
-  //box-sizing: border-box;
   background-color: $turkus;
-  //width: 100%;
   text-align: center;
 
   .details-header {
@@ -438,12 +436,9 @@ h2 {
   text-align: center;
   padding-bottom: 5em;
   form {
-    //width: 80%;
-    //margin: 0 auto;
     text-align: center;
   }
   input {
-    //background: $turkus;
     width: 70%;
     font-size: 1.5em;
     color: $brown;
@@ -498,7 +493,6 @@ button {
   padding: 1em 4em;
   cursor: pointer;
   border: 1px solid #6BC29D;
-  //text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -webkit-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -moz-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
@@ -647,7 +641,6 @@ button:active
   padding: 1px 20px;
   cursor: pointer;
   border: 1px solid #6BC29D;
-  //text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -webkit-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
   -moz-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
   box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
@@ -679,7 +672,6 @@ button:active
   background-image: -o-linear-gradient(to bottom, $green, $turkus);
   background-image: -ms-linear-gradient(to bottom, $green, $turkus);
   background-image: linear-gradient(to bottom, $green, $turkus);
-
   margin-bottom: 15px;
 }
 .row_footer{
