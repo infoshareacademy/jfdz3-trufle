@@ -214,6 +214,7 @@ h2 {
 
 .navbar {
   background-image: url(../img/trains.png);
+  background-size: cover;
   margin: 0;
   padding: 2em 2em 2em 0;
   -webkit-border-top-left-radius: 20px;
@@ -373,6 +374,7 @@ footer i:hover {
   transform: rotateZ(360deg); }
 
 button {
+  margin-bottom: 2px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -393,6 +395,7 @@ button {
   outline: 0; }
 
 button:hover {
+  margin-top: 2px;
   margin-bottom: 0px;
   -webkit-box-shadow: 1px 1px 2px #969696;
   -moz-box-shadow: 1px 1px 2px #969696;
@@ -416,6 +419,7 @@ button:active {
   background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
 
 .details-footer button {
+  margin-bottom: 2px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -436,6 +440,7 @@ button:active {
   outline: 0; }
 
 .details-footer button:hover {
+  margin-top: 2px;
   margin-bottom: 0px;
   -webkit-box-shadow: 1px 1px 2px #969696;
   -moz-box-shadow: 1px 1px 2px #969696;
@@ -501,15 +506,17 @@ button:active {
   border: 1px solid gray;
   background: url(../img/strip.jpg) no-repeat;
   padding: 4px 10px 4px 10px;
-  margin: 1px 10px 1px 0px; }
+  margin: 1px 10px 1px 10px; }
 
 #quantity {
   width: 80px;
   font-size: 24px;
+  font-style: italic;
   padding: 0px 10px 0px 10px; }
 
 #test_button {
   width: auto;
+  margin-bottom: 2px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -527,10 +534,10 @@ button:active {
   background-image: -o-linear-gradient(to top, #D5FCF2, #83E6CE);
   background-image: -ms-linear-gradient(to top, #D5FCF2, #83E6CE);
   background-image: linear-gradient(to top, #D5FCF2, #83E6CE);
-  outline: 0;
-  margin-bottom: 15px; }
+  outline: 0; }
 
 #test_button:hover {
+  margin-bottom: 1px;
   -webkit-box-shadow: 1px 1px 2px #969696;
   -moz-box-shadow: 1px 1px 2px #969696;
   box-shadow: 1px 1px 2px #969696;
@@ -538,8 +545,7 @@ button:active {
   background-image: -moz-linear-gradient(to bottom, #D5FCF2, #83E6CE);
   background-image: -o-linear-gradient(to bottom, #D5FCF2, #83E6CE);
   background-image: -ms-linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE);
-  margin-bottom: 15px; }
+  background-image: linear-gradient(to bottom, #D5FCF2, #83E6CE); }
 
 #test_button:active {
   -webkit-box-shadow: -1px -1px 2px #969696;
