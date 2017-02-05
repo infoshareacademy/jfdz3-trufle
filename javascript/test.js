@@ -51,6 +51,10 @@
 var countrie, random;
 
 $('#reloadQuestion').click(function () {
+    startQuiz();
+})
+
+function startQuiz() {
     $.ajax({
         url: "https://restcountries.eu/rest/v1/all",
         success: function (allCountries) {
@@ -108,8 +112,8 @@ $('#reloadQuestion').click(function () {
             $('#myRange').attr('max', maxVal); // add MAX value attribute to input.range
             $('#maxPop').html(numeral(maxVal).format('0,000.00a')); // display MAX value before input.range
 
-            $('#countrieQuestion').append(countrieQuest.name);
-            $('#countrieData').append(countrieData);
+            $('#countrieQuestion').html(countrieQuest.name);
+            $('#countrieData2').html(countrieData);
 
             console.log($('#myRange').attr('min'));
             console.log($('#myRange').attr('max'));
@@ -136,6 +140,7 @@ $('#reloadQuestion').click(function () {
                 if (answer > minRightAnswer && answer < maxRightAnswer) {
                     console.log('DOBRZE!');
                     $('#wrong').hide();
+                    $('#correct').fadeOut('fast');
                     $('#correct').fadeIn('slow');
                     $('#countrieData').fadeIn("slow");
 
@@ -143,6 +148,7 @@ $('#reloadQuestion').click(function () {
                     console.log('ŹLE!');
                     $('#correct').hide();
                     $('#countrieData').hide();
+                    $('#wrong').fadeOut('fast');
                     $('#wrong').fadeIn('slow');
                 }
             });
@@ -151,6 +157,47 @@ $('#reloadQuestion').click(function () {
             $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKljXf4TroNrn0vwSpdLiC5bZF1htiO9Y&callback=initMap" async defer></script>');
             /** Google Map 2 END **/
 
+            // $('#wrong').hide();
+            // $('#correct').hide();
+            // $('#countrieData').hide();
         }
     });
+};
+startQuiz();
+
+
+
+/** Video Background **/
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+    vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed
+    vid.pause();
+// to capture IE10
+    vidFade();
 });
+
+
+pauseButton.addEventListener("click", function() {
+    vid.classList.toggle("stopfade");
+    if (vid.paused) {
+        vid.play();
+        pauseButton.innerHTML = "Pause";
+    } else {
+        vid.pause();
+        pauseButton.innerHTML = "Paused";
+    }
+})
+
