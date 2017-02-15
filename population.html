@@ -1,53 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jQuery UI Slider - Range slider</title>
-    <link rel="stylesheet" href="css/population.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="javascript/numeral-js/numeral.js"></script>
-    <script src="javascript/population.js"></script>
+
+    <!--***********FontAwesome***********-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--***********bootstrap CSS***********-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--***********Custom CSS***********-->
+    <link rel="stylesheet" href="css/population.css">
 
     <!--Google Map-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-    <script>
-        function getAllCountriesFromApi(callback) {
-            var allCountries = [];
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    allCountries = JSON.parse(this.responseText);
-                    callback(allCountries);
-                }
-            };
-            xhttp.open("GET", "https://restcountries.eu/rest/v1/all", true);
-            xhttp.send();
-
-        }
-    </script>
 </head>
 <body>
-<div class="content">
-    <h3>Jaka jest populacja w:<span id="countryQuest">---</span>
-        <span style="display: block; font-size: 14px; color: #8f8f8f;">Możesz się pomylić o 20%</span></h3>
+<div class="container content">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Jaka jest populacja w:<span id="countryQuest">---</span>
+                <span style="display: block; font-size: 14px; color: #8f8f8f;">Możesz się pomylić o 20%</span></h3>
 
-    <div class="rangePopulation"><span id="minPop"></span> <input type="range" id="myRange" value="90" min="100" max="10000" disabled step="1"
-                                     style="width: 80%;"> <span id="maxPop"></span></div>
+            <div class="rangePopulation">
+                <div class="col-xs-1" style="margin-top: 5px;"><span id="minPop"></span></div>
+                <div class="col-xs-10"><input type="range" id="myRange" value="90" min="100" max="10000" disabled
+                                              step="1"></div>
+                <div class="col-xs-1" style="margin-top: 5px;"><span id="maxPop"></span></div>
+            </div>
+        </div>
+    </div>
+
     <div class="answer">
         <p style="display: inline;">Twoja odpowiedź: <span id="answer">---</span></p>
         <button id="ansBtn">Odpowiedz</button>
+        <span id="reloadQuestion"><i class="fa fa-refresh" aria-hidden="true"></i></span>
         <div id="correct">DOBRZE!</div>
         <div id="wrong">ŹLE!</div>
         <table id="countrieData" collapse>
             <thead>
-            <tr><th colspan="2"><span id="countrieQuestion"></span></th></tr>
             <tr>
-                <th>Dane</th><th>Wartość</th>
+                <th colspan="2"><span id="countrieQuestion"></span></th>
+            </tr>
+            <tr>
+                <th>Dane</th>
+                <th>Wartość</th>
             </tr>
             </thead>
+            <tbody id="countrieData2">
+
+            </tbody>
         </table>
     </div>
 
@@ -55,5 +60,11 @@
     <div id="map"></div>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKljXf4TroNrn0vwSpdLiC5bZF1htiO9Y&callback=initMap" async defer></script>-->
 </div>
+<video poster="media/Snapshots/Airtaxi.jpg" id="bgvid" playsinline autoplay muted loop>
+    <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+    <source src="media/Webm/Airtaxi.webm" type="video/webm">
+    <source src="media/Mp4/Airtaxi.mp4" type="video/mp4">
+</video>
+<script src="javascript/population.js"></script>
 </body>
 </html>
