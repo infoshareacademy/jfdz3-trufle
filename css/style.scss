@@ -190,7 +190,6 @@ h2 {
 
 /*----Media----*/
 
-
 @media (max-width: 992px){
   .item .img-responsive
   {
@@ -226,9 +225,37 @@ h2 {
 /*---End Slider---*/
 
 
+/*---Team---*/
+#team{
+  background-image: url(../img/city1.png);
+  background-size: cover;
+  background-color: #ededed;
+}
+#team img{
+  border: 1px solid #757575;
+}
+.team p{
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius:5px;
+  border: 1px solid rgba(105, 105, 105, 0.3);
+  width: 200px;
+  margin: 0 auto;
+}
+.team h2{
+  font-size: 44px;
+}
 
-main{
-  //margin-top: 119px;
+
+
+/*---Details---*/
+.details-footer{
+  margin-bottom: 20px;
+}
+.details-header, .details-body{
+  border-radius: 5px;
+}
+.details h2{
+  font-size: 44px;
 }
 .content{
   -webkit-border-radius: 20px;
@@ -262,6 +289,8 @@ main{
 }
 
 .navbar{
+  background-image: url(../img/trains.png);
+  background-size: cover;
   margin: 0;
   padding: 2em 2em 2em 0;
   -webkit-border-top-left-radius: 20px;
@@ -294,7 +323,9 @@ main{
     color: #83E6CE;
   }
 }
-
+.product-info h2{
+  font-size: 44px;
+}
 .product-info {
   background: $turkus;
   text-align: center;
@@ -381,9 +412,7 @@ main{
   }
 }
 .details {
-  //box-sizing: border-box;
   background-color: $turkus;
-  //width: 100%;
   text-align: center;
 
   .details-header {
@@ -407,12 +436,9 @@ main{
   text-align: center;
   padding-bottom: 5em;
   form {
-    //width: 80%;
-    //margin: 0 auto;
     text-align: center;
   }
   input {
-    //background: $turkus;
     width: 70%;
     font-size: 1.5em;
     color: $brown;
@@ -467,7 +493,6 @@ button {
   padding: 1em 4em;
   cursor: pointer;
   border: 1px solid #6BC29D;
-  //text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -webkit-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -moz-box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   box-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
@@ -551,6 +576,45 @@ button:active
 /*# sourceMappingURL=style.css.map */
 /*NEWSLETTER*/
 
+#newsletter{
+  background:url(../img/header_newsletter.png) no-repeat;
+  background-size: cover;
+  padding-bottom: 0px;
+
+}
+#newsletter_forma{
+  background: rgba(226,226,226,0.4);
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#newsletter_forma:hover{
+  background: rgba(226,226,226,0.5);
+}
+#newsletter_forma h2{
+  margin:0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 34px;
+}
+#newsletter_forma h3{
+  margin-top:0px;
+  margin-bottom:20px;
+  font-size: 20px;
+}
+#button_form{
+  margin-bottom: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+#letter{
+  margin-left: 10px;
+}
+
+
+
 #task{
   font-size: 24px;
   font-style: italic;
@@ -577,7 +641,6 @@ button:active
   padding: 1px 20px;
   cursor: pointer;
   border: 1px solid #6BC29D;
-  //text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
   -webkit-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
   -moz-box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
   box-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
@@ -609,4 +672,11 @@ button:active
   background-image: -o-linear-gradient(to bottom, $green, $turkus);
   background-image: -ms-linear-gradient(to bottom, $green, $turkus);
   background-image: linear-gradient(to bottom, $green, $turkus);
+  margin-bottom: 15px;
+}
+.row_footer{
+  background: url(../img/trains_footer.png);
+  background-size: cover;
+  background-color: $turkus;
+
 }

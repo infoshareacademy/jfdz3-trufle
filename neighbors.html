@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Neighbors</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./javascript/rx.all.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/css_slawek.css">
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwf5jx7DUGrZcovLshYovBZPkafysXhUs&callback=initMap"></script>-->
+
 </head>
 <body>
 
+
+<main class="container">
+
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#nauka" data-toggle="tab">Nauka</a></li>
+        <li><a href="#quiz" data-toggle="tab">Quiz</a></li>
+    </ul>
+
+
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="nauka">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Nauka o krajach</h1>
+                    <form action="">
+                        <label for="inputCountry">Nazwa Kraju</label>
+                        <input id="inputCountry" type="text" value="" name="kraj" placeholder="Wpisz nazwę kraju"
+                               class="form-control">
+                        <h5>Liczba krajow: <span class="badge" id="numberOfCountriesBadge">250</span></h5>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="mainBody"></div>
+                </div>
+                <div class="col-md-6">
+                    <div id="weather" class="well well-lg col-md-8"></div>
+                    <div id="map" class="col-md-12 thumbnail"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="quiz">
+
+            <h1>Quiz Geograficzny</h1>
+            <div class="row">
+                <div id="choose-region" class="head-left well col-md-6">
+                    <label class="checkbox-inline myFlag"><input type="checkbox" name="checkBoxTestScope" id="europe">Europe</label>
+                    <label class="checkbox-inline myFlag"><input type="checkbox" name="checkBoxTestScope" id="asia">Asia</label>
+                    <label class="checkbox-inline myFlag"><input type="checkbox" name="checkBoxTestScope" id="americas">Americas</label>
+                    <label class="checkbox-inline myFlag"><input type="checkbox" name="checkBoxTestScope" id="africa">Africa</label>
+                    <label class="checkbox-inline myFlag"><input type="checkbox" name="checkBoxTestScope" id="oceania">Oceania</label>
+                </div>
+                <div id="timerHeader" class="head-right well col-md-2 col-md-push-4 text-center" style="display:none">
+                    <span id="timer"></span>
+                </div>
+            </div>
+
+            <div id="klawisze">
+                <div class="start row">
+                    <button id="start-test" class="btn" onclick="quizInitiation()">Start Test</button>
+                    <button id="next-question" class="btn " onclick="nextQuestion()">Next Question</button>
+                    <button id="new-quiz" class="btn " onclick="newQuiz()">New Quiz </button>
+                </div>
+
+            </div>
+                    <div class="row">
+                        <div  class="quiz-panel col-md-6">
+                        </div>
+                        <div  class="quiz-odpowiedzi col-md-6">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script src="./javascript/neighbors_main.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzuOdOiv__xNUHHbyqYszQ4CW3B2ndRQA&callback=initMap"></script>
 </body>
 </html>
