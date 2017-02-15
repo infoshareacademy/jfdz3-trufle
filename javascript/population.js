@@ -24,9 +24,9 @@
                     zoom = 3;
                 }
 
-                console.log(lat + ' ' + lng);
-                console.log(area);
-                console.log(zoom);
+                // console.log(lat + ' ' + lng);
+                // console.log(area);
+                // console.log(zoom);
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     center: new google.maps.LatLng(lat, lng),
@@ -51,6 +51,9 @@
 var countrie, random;
 
 $('#reloadQuestion').click(function () {
+    $('#correct').hide();
+    $('#countrieData').hide();
+    $('#wrong').hide();
     startQuiz();
 })
 
@@ -60,7 +63,7 @@ function startQuiz() {
         success: function (allCountries) {
 
 
-            console.log(allCountries[0].name);
+            // console.log(allCountries[0].name);
 
 
             countrie = allCountries.map(function (countrie) {
@@ -82,7 +85,7 @@ function startQuiz() {
                 }
             })
 
-            console.log(countrie[0]);
+            // console.log(countrie[0]);
             $("input").prop('disabled', false); // disabel input.range before load data
             random = Math.floor((Math.random() * 250) + 1); // random number from 1 to 250 (250 = all cuntires)
             var countrieQuest = countrie[random]; // random countrie to the game 178 = Poland index
@@ -102,7 +105,7 @@ function startQuiz() {
                 '</td></tr><tr><td>Języki</td><td>' + countrieQuest.languages +
                 '</td></tr>'
             );
-            console.log(countrieQuest);
+            // console.log(countrieQuest);
 
             $('#countryQuest').html(' ' + countrieQuest.name); // insert name of countrie
             minVal = Math.round(population / 1000) * 1000 / 10; // radnom MIN value of population to choose
@@ -115,13 +118,13 @@ function startQuiz() {
             $('#countrieQuestion').html(countrieQuest.name);
             $('#countrieData2').html(countrieData);
 
-            console.log($('#myRange').attr('min'));
-            console.log($('#myRange').attr('max'));
+            console.log('minRange: ' + $('#myRange').attr('min'));
+            console.log('maxRange: ' + $('#myRange').attr('max'));
 
 
             minRightAnswer = population - (population / 100 * 20); // select MIN value to correct answer
             maxRightAnswer = population + (population / 100 * 20); // select MAX value to right answer
-            console.log(minRightAnswer + ' - ' + population + ' - ' + maxRightAnswer); // display range of correct value
+            console.log('correct answer between: ' + minRightAnswer + ' - ' + maxRightAnswer); // display range of correct value
 
 
             /**displays current values selected**/
@@ -140,7 +143,7 @@ function startQuiz() {
                 if (answer > minRightAnswer && answer < maxRightAnswer) {
                     console.log('DOBRZE!');
                     $('#wrong').hide();
-                    $('#correct').fadeOut('fast');
+                    $('#correct').hide();
                     $('#correct').fadeIn('slow');
                     $('#countrieData').fadeIn("slow");
 
@@ -148,7 +151,7 @@ function startQuiz() {
                     console.log('ŹLE!');
                     $('#correct').hide();
                     $('#countrieData').hide();
-                    $('#wrong').fadeOut('fast');
+                    $('#wrong').hide();
                     $('#wrong').fadeIn('slow');
                 }
             });
@@ -181,23 +184,22 @@ function vidFade() {
     vid.classList.add("stopfade");
 }
 
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed
-    vid.pause();
-// to capture IE10
-    vidFade();
-});
+// vid.addEventListener('ended', function()
+// {
+// // only functional if "loop" is removed
+//     vid.pause();
+// // to capture IE10
+//     vidFade();
+// });
 
-
-pauseButton.addEventListener("click", function() {
-    vid.classList.toggle("stopfade");
-    if (vid.paused) {
-        vid.play();
-        pauseButton.innerHTML = "Pause";
-    } else {
-        vid.pause();
-        pauseButton.innerHTML = "Paused";
-    }
-})
+// pauseButton.addEventListener("click", function() {
+//     vid.classList.toggle("stopfade");
+//     if (vid.paused) {
+//         vid.play();
+//         pauseButton.innerHTML = "Pause";
+//     } else {
+//         vid.pause();
+//         pauseButton.innerHTML = "Paused";
+//     }
+// })
 
