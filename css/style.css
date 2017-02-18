@@ -610,4 +610,11 @@ button:active {
   background-size: cover;
   background-color: #83E6CE; }
 
+@media (min-width: 767px) and (max-width: 1200px) {
+  .nav {
+    display: none; }
+
+  .navbar-right {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */

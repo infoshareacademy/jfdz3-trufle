@@ -739,3 +739,12 @@ button:active
   background-color: $turkus;
 
 }
+
+@media (min-width: 767px) and (max-width: 1200px) {
+.nav{
+  display: none;
+}
+.navbar-right {
+  display: none;
+}
+}
