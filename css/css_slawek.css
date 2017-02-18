@@ -1,0 +1,24 @@
+#weather{
+  display: none;
+  text-transform: capitalize;
+}
+
+#map {
+  display: none;
+  height: 400px;
+  width: 100%;
+}
+
+.quiz-panel{
+  height: 500px;
+  margin-top: 20px;
+}
+
+.sl-question-header{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#next-game{
+  display: none
+}
