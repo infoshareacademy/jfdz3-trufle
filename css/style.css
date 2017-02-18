@@ -1,11 +1,3 @@
-body {
-  width: 100%;
-  height: 100%; }
-
-html {
-  width: 100%;
-  height: 100%; }
-
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
@@ -18,32 +10,12 @@ html {
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
-.intro-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #fff; }
-
-.about-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #eee; }
-
-.services-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #fff; }
-
-.contact-section {
-  height: 100%;
-  padding-top: 150px;
-  text-align: center;
-  background: #eee; }
-
 article {
-  padding-top: 150px !important; }
+  padding-top: 143px !important; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background: none;
+  color: #83E6CE; }
 
 /*----------------------------------*/
 body {
@@ -280,6 +252,8 @@ h2 {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px; }
+  .navbar ul li.active {
+    background: #546c7b; }
   .navbar ul li:hover {
     background: #546c7b;
     cursor: pointer; }
