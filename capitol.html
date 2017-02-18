@@ -2,9 +2,281 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capitals</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/github.com/infoshareacademy/jfdz3-trufle/tree/master/javascript/numeral-js"></script>
+
+    <!--Google Map-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!---Javascript Confirm--->
+    <script type="text/javascript" src="jquery-confirm-master/dist/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="jquery-confirm-master/dist/jquery-confirm.min.css">
+
+    <style>
+        h3{
+            margin-bottom: 0px;
+        }
+        .timer{
+            width: 175px;
+            font-size: 20px;
+        }
+        .jconfirm .jconfirm-box.jconfirm-animation-news{
+        // the animation name is bob
+        width: 350px;
+            transform: rotate(400deg) scale(0);
+        }
+        .jconfirm-box{
+            width: 350px;
+            border: 1px solid #191970;
+            border-bottom: 1px solid #191970;
+            color:#191970
+            font-size: 50px;
+        }
+        body {
+            background: url(img/city.png) repeat-x 0 100% fixed,
+
+            url(img/cloud.png) no-repeat fixed,
+            url(img/cloud.png) no-repeat fixed,
+            url(img/sun.gif) no-repeat fixed,
+            linear-gradient(to top, #5080b1, #004e8c) fixed;
+            animation: city 30s linear infinite;
+            -webkit-animation: city 30s linear infinite;
+        }
+        @keyframes city {
+            from { background-position: -1000px 100%, 120% 30%, 120% 15%, 100% 5%, 0 0;}
+            to { background-position: 0 100%, -200% 10%, -50% 15%,-30% 0%, 0 0; }
+        }
+        @-webkit-keyframes city {
+            from { background-position: -1000px 100%, 120% 30%, 120% 15%, 100% 5%, 0 0;}
+            to { background-position: 0 100%, -200% 10%, -50% 15%, -30% 0%, 0 0; }
+        }
+        div.font{
+            width: 400px;
+            border: 2px solid #191970;
+            border-radius: 10px;
+            margin-lefrt: 15px;
+            margin-right: 15px;
+            background: rgba(253, 245, 230, 0.8);
+            float: right;
+            padding:10px;
+        }
+
+        #btn_capital {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: .5em 2em;
+            outline: none;
+            border-width: 2px 0;
+            border-style: solid none;
+            border-color: #FDBE33 #000 #D77206;
+            border-radius: 6px;
+            background: linear-gradient(#F3AE0F, #E38916) #E38916;
+            transition: 0.2s;
+            margin-bottom: 7px;
+        }
+        #btn_capital:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+        #btn_capital:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
+        input{
+            margin-bottom: 5px;
+        }
+        #regions_div
+        {
+            width: 800px;
+            height: 495px;
+            border: 2px solid #191970;
+            margin:0px;
+            padding: 0px;
+            overflow:hidden;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+<div class='font'>
+    <!--Timer-->
+    <div class='timer'>Pozostało:<span id="timer_inp">15</span>sekund.</div>
+    <!--End Timer-->
+
+    <!--Form of answer-->
+    <h3>Jaka jest stolica w:<span id="countryQuest">---</span></h3><br>
+    <input  type="text" name="text" id="city_capital"><br>
+    <label for="city_capital">Napisz poprawną nazwę</label>
+    <p><button id="btn_capital" class='zmiana'>Odpowiedz</button><br>
+        <span>Naciśnij przycisk, aby znaleźć właściwą odpowiedź.</span></p>
+
+    <!--End Form of answer-->
+</div>
+<!--Google Map-->
+<div id="regions_div"></div>
+<!--End Google Map-->
+
+<script>
+    /*--Timer--*/
+    var obj = document.getElementById('timer_inp');
+    var timerInt = null;
+    var timer1;
+    city_capital.onmouseup = function timer(){
+        obj.innerHTML--;
+        if (obj.innerHTML == 0){
+            $.confirm({
+                animation: 'news',
+                closeAnimation: 'news',
+                title: 'Odpowiedz nie podana poprawnie!',
+                content: 'Chcesz spróbować ponownie?',
+                buttons: { Так: {btnClass: 'btn-blue',
+                    action: function () {
+                        document.getElementById("city_capital").enabled = window.location.reload(false);
+                    }},
+                    Nie: {btnClass: 'btn-blue',
+                        action: function () {
+                            return document.getElementById("city_capital").disabled = true;
+
+                        }}
+                },
+            });
+            timer1 = setTimeout(function(){
+
+            },1000);
+        }
+        else {
+
+            timerInt = setTimeout(timer,1000);
+        }
+    }
+
+    /*------------------------The Game------------------------*/
+    window.onload = function () {
+
+        var displayCountries = function (europe) {
+            // run game and create forms
+            console.log("Europe:" + europe[0].name);
+            console.dir(europe);
+
+            var countrie = europe.map(function (countrie) {
+                return {
+                    code: countrie.numericCode,
+                    name: countrie.name,
+                    capital: countrie.capital,
+                    population: countrie.population
+                }
+            })
+
+            $("input").prop('disabled', false); // disabel input.range before load data
+            var random = Math.floor((Math.random() * 53) + 1); // random number countries from 1 to 53 (53 = all cuntires)
+            var countrieQuest = countrie[random];
+            $('#countryQuest').html(' ' + countrieQuest.name); // insert name of countrie
+
+
+            /*------------cantry console.log------------*/
+
+            var poland = countrie.filter(function( obj ) {
+                return obj.name == 'Poland';
+            });
+            console.log('code: ' + countrieQuest.code + '\nKraj: ' + countrieQuest.name + ' \nStolica:' + countrieQuest.capital);
+
+            /*------------end cantry console.log------------*/
+
+            ////////////////////////////////////////*button*////////////////////////////////////////
+            $('#btn_capital').click(function someFunc(){
+                clearTimeout(timerInt);
+                var city_capital = document.getElementById("city_capital").value;
+                if(countrieQuest.capital == city_capital )
+                {
+                    $.confirm({
+                        animation: 'news',
+                        closeAnimation: 'news',
+                        title: 'Odpowiedz podana poprawnie! ',
+                        content: 'Chcesz spróbować ponownie?',
+                        buttons: { Так: {btnClass: 'btn-blue',
+                            action: function () {
+                                document.getElementById("city_capital").enabled = window.location.reload(false);
+                            }},
+                            Nie: {btnClass: 'btn-blue',
+                                action:function () {
+
+                                    return document.getElementById("city_capital").disabled = true;
+
+                                }},
+                        },
+                    });
+                }
+
+                else
+                {
+                    $.confirm({
+                        animation: 'news',
+                        closeAnimation: 'news',
+                        title: 'Odpowiedz podana nie poprawnie!',
+                        content: 'Chcesz spróbować ponownie?',
+                        buttons: { Так: {btnClass: 'btn-blue',
+                            action: function () {
+                                document.getElementById("city_capital").enabled = window.location.reload(false);
+
+                            }},
+                            Nie: {btnClass: 'btn-blue',
+                                action:function () {
+                                    return document.getElementById("city_capital").disabled = true;
+                                }},
+                        },
+                    });
+                }
+            });
+
+            /************************
+             ***** GOOGLE  MAP ******
+             ************************/
+            google.charts.load('upcoming', {'packages':['geochart']});
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+
+            function drawRegionsMap() {
+
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Capitals'],
+                    [countrieQuest.name, countrieQuest.capitals]
+                ]);
+
+                var options = {
+                    backgroundColor: '#191970',
+                    region: '150',
+                    width: '100%',
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+                chart.draw(data, options);
+            }
+            /****************************
+             ***** GOOGLE  MAP END ******
+             ***************************/
+        }; //end of displayCountries
+
+
+        getAllCountriesFromApi(displayCountries);
+    };
+
+    function getAllCountriesFromApi(callback) {
+        var allCountries = [];
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                allCountries = JSON.parse(this.responseText);
+                callback(allCountries);
+            }
+        };
+        xhttp.open("GET", "https://restcountries.eu/rest/v1/region/europe", true);
+        xhttp.send() ;
+    }
+</script>
+
+
 
 </body>
 </html>
