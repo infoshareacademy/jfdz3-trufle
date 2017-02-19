@@ -1,9 +1,9 @@
 @media (min-width: 767px) {
   .navbar {
     padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out; }
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out; }
 
   .top-nav-collapse {
     padding: 0; } }
@@ -589,6 +589,35 @@ button:active {
     display: none; }
 
   .navbar-right {
-    display: none; } }
+    display: none; }
+
+  .navbar-logo img {
+    padding: 20px 40px; } }
+@media (min-width: 767px) and (max-width: 991px) {
+  .nav {
+    display: block; }
+
+  .navbar ul li {
+    font-size: 1em;
+    padding: .3em 2em;
+    margin: .2em; }
+
+  .navbar-logo img {
+    width: 150px;
+    padding: 0;
+    margin: 0 10px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav {
+    display: block; }
+
+  .navbar ul li {
+    font-size: 1em;
+    padding: .4em 2em;
+    margin: .3em; }
+
+  .navbar-logo img {
+    width: 200px;
+    padding: 0;
+    margin: 0 30px; } }
 
 /*# sourceMappingURL=style.css.map */
